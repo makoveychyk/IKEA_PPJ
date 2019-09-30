@@ -45,7 +45,7 @@ export default class Header extends Component {
     };
     return (
       <>
-        <header className="ikea-header">
+        <header className="ikea-header ikea-medium-text ">
           <div className="ikea-header__inner">
             <div className="container ikea-header__content">
               <nav className="ikea-nav">

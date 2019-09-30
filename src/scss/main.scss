@@ -1,5 +1,14 @@
+//Bootstrap
+
 @import "~bootstrap/scss/bootstrap-grid";
+
+//Font style and size
+
 @import "fonts";
+@import "text";
+@import "variables";
+
+//Components
 
 @import "header";
 @import "navigation";
@@ -11,6 +20,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+body {
+  font-size: 16px;
 }
 .ikea-line {
   display: block;
