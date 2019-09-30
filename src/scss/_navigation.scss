@@ -1,0 +1,63 @@
+.ikea-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 62%;
+  @include media-breakpoint-up(md) {
+    width: 55%;
+  }
+  &__burger {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: inherit;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+  &__list {
+    display: none;
+    list-style-type: none;
+    margin-left: 73px;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
+  }
+  &__item:not(:last-child) {
+    display: block;
+    margin-right: 48px;
+  }
+  &__item {
+    display: block;
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background-color: #ffd600;
+      border-radius: 3px 3px 0px 0px;
+      top: 25px;
+      opacity: 0;
+      transition: all 0.15s linear;
+    }
+    &:hover::after,
+    &_active::after {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import "~bootstrap/scss/bootstrap-grid";
+.ikea-user-tools {
+  display: flex;
+  align-items: center;
+  &__btn {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: flex-end;
+    height: 32px;
+    transition: all 0.15s linear;
+    &-log {
+      display: none;
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
+    }
+    &:hover {
+      color: #ffd600;
+    }
+  }
+  &__icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+  &__btn:not(:last-child) {
+    margin-right: 20px;
+    @include media-breakpoint-up(lg) {
+      margin-right: 32px;
+    }
+  }
+
+  &__icon-search:hover {
+    fill: #ffd600;
+    transition: all 0.15s linear;
+  }
+}
+.ikea-profile {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px 0px;
+  flex-direction: column;
+  padding-left: 20px;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "Roboto" sans-serif;
+    color: #282f36;
+    transition: all 0.15s linear;
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+    &:hover {
+      color: #ffd600;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}

@@ -1,0 +1,15 @@
+.ikea-logo {
+  display: flex;
+  align-items: center;
+}
+.ikea-logo-mobile {
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+.ikea-logo-desk {
+  display: none;
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}
