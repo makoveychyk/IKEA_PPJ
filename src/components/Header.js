@@ -129,28 +129,6 @@ export default class Header extends Component {
                     </a>
                   </li>
                   {renderNavItems(nav)}
-                  {/* {nav.map(item => (
-                    <li className="ikea-nav__item">
-                      <a href="#" className="ikea-nav__link">
-                        {item.title}
-                      </a>
-                    </li>
-                  ))} */}
-                  {/* <li className="ikea-nav__item">
-                    <a href="#" className="ikea-nav__link">
-                      New
-                    </a>
-                  </li>
-                  <li className="ikea-nav__item">
-                    <a href="#" className="ikea-nav__link">
-                      Rooms
-                    </a>
-                  </li>
-                  <li className="ikea-nav__item">
-                    <a href="#" className="ikea-nav__link">
-                      Best Price
-                    </a>
-                  </li> */}
                 </ul>
               </nav>
               <div className="ikea-user-tools">
@@ -322,56 +300,6 @@ export default class Header extends Component {
             <div className="ikea-line"></div>
             <div className="ikea-menu__category">
               {renderCategoryItems(category)}
-              {/* {category.map(item => (
-                <a href="#" className="ikea-menu__link ikea-menu__text">
-                  {item.title}
-                </a>
-              ))} */}
-              {/* <a href="#" className="ikea-menu__link ikea-menu__text">
-                Categories
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                Populas products
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                New at IKEA
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                Rooms
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                Cookware
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                Product under $10
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                Product under $10
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                Product under $10
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                Product under $10
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                Product under $10
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                Product under $10
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                Product under $10
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                Product under $10
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                Product under $10
-              </a>
-              <a href="#" className="ikea-menu__link ikea-menu__text">
-                Product under $10
-              </a> */}
             </div>
             <div className="ikea-line"></div>
             <div className="ikea-menu__sale">
@@ -391,61 +319,8 @@ export default class Header extends Component {
                 Click
               </button>
             </div>
-            {/* <div className="ikea-menu__other">
-              <div className="ikea-menu__catalog">
-                <img src="img/addvert.jpg" alt="" />
-                <div className="ikea-menu__catalog-inner">
-                  <div className="ikea-menu__catalog-content">
-                    <h3>IKEA New Catalog 2020</h3>
-                    <span className="ikea-menu__subcaption">
-                      New trends and facilities
-                    </span>
-                  </div>
-                  <span className="ikea-menu__arrow">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12.172 7.00066L6.808 1.63666L8.222 0.222659L16 8.00066L8.222 15.7787L6.808 14.3647L12.172 9.00066H0V7.00066H12.172Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-              <div className="ikea-menu__catalog">
-                <img src="img/addvert2.jpg" alt="" />
-                <div className="ikea-menu__catalog-inner">
-                  <div className="ikea-menu__catalog-content">
-                    <h3>New Bedroom ideas</h3>
-                    <span className="ikea-menu__subcaption">
-                      More comfortable and fair
-                    </span>
-                  </div>
-                  <span className="ikea-menu__arrow">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12.172 7.00066L6.808 1.63666L8.222 0.222659L16 8.00066L8.222 15.7787L6.808 14.3647L12.172 9.00066H0V7.00066H12.172Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </div> */}
           </div>
         </header>
-        <div className="par"></div>
       </>
     );
   }

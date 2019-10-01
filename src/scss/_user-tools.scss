@@ -37,6 +37,7 @@
     width: 20px;
     height: 20px;
     background-color: $yellow-3;
+    transition: all 0.15s linear;
     &_visible {
       display: flex;
     }
