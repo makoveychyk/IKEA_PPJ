@@ -18,11 +18,21 @@
 @import "user-tools";
 @import "banner";
 @import "new-products";
+@import "slider";
+@import "footer";
+
+//Slider
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+img {
+  width: 100%;
+  @include media-breakpoint-up(lg) {
+    width: auto;
+  }
 }
 body {
   font-size: 16px;

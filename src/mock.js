@@ -1,9 +1,28 @@
-export const banner = {
-  img: "img/Group.png",
-  title: "Don’t worry, sit happy!",
-  subtitle: "Up to 15% off* couch",
-  period: "August 15 - September 21"
-};
+export const banner = [
+  {
+    img: "img/sofa.png",
+    title: "Don’t worry, sit happy!",
+    subtitle: "Up to 15% off* couch",
+    period: "August 15 - September 21",
+    position: "right"
+  },
+  {
+    img: "img/banner_cheir.png",
+    title: "Living in style",
+    subtitle: "Check our special offers to armchairs ",
+    period: "Only to 21 Oktober",
+    position: "left",
+    size: "small"
+  },
+  {
+    img: "img/banner_sofa@2x.png",
+    title: "Don’t worry, relax happy!",
+    subtitle: "Up to 35% off* couch",
+    period: "August 02 - September 11",
+    position: "right",
+    size: "medium"
+  }
+];
 export const newProducts = {
   img: "img/catalog.png",
   title: "The 2020 IKEA Catalogue is here!",

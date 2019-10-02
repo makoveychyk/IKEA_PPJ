@@ -1,0 +1,68 @@
+.ikea-slider {
+  background-color: $bg-1;
+  padding: 30px 0px 50px 0px;
+  @include media-breakpoint-up(lg) {
+    padding: 100px 0px 50px 0px;
+  }
+  &:focus {
+    outline: none;
+  }
+  & .slick-slider:focus {
+    outline: none;
+  }
+  & .slick-dots {
+    position: relative;
+    bottom: 0;
+    border: none;
+    outline: none;
+  }
+  & .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  & .slick-track:focus {
+    outline: none !important;
+  }
+  & .slick-dots li button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  & .slick-dots li button:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $grey-1;
+    opacity: 1;
+    position: relative;
+  }
+  & .slick-dots .slick-active button:before {
+    width: 10px;
+    height: 10px;
+    background-color: $yellow-1;
+    border: 2px solid $yellow-3;
+  }
+  & .slick-arrow {
+    display: none !important;
+    @include media-breakpoint-up(lg) {
+      z-index: 10;
+    }
+  }
+  & .slick-prev {
+    left: 180px;
+  }
+  & .slick-next {
+    right: 180px;
+  }
+  & .slick-prev:before,
+  & .slick-next:before {
+    content: none;
+  }
+  & .slick-prev:hover svg,
+  & .slick-next:hover svg {
+    fill: #a9acaf;
+    transition: all 0.15s linear;
+  }
+}

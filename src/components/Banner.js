@@ -1,20 +1,38 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { banner } from "../mock";
+
 export default class Banner extends Component {
   render() {
+    const { position, img, title, subtitle, period, size } = this.props.data;
     return (
       <section className="ikea-banner">
-        <div className="ikea-banner__inner">
-          <div className="ikea-banner__content">
+        <div
+          className={`ikea-banner__inner ${
+            size === "small"
+              ? "ikea-banner__inner_sm"
+              : size === "medium"
+              ? "ikea-banner__inner_md"
+              : ""
+          }`}
+        >
+          {position === "left" ? (
+            <img src={img} alt="" className="ikea-banner__img" />
+          ) : (
+            ""
+          )}
+          <div
+            className={`ikea-banner__content ${position === "right" &&
+              "ikea-banner__content_margin"}`}
+          >
             <h1 className="ikea-title-text ikea-title-30 ikea-banner__title">
-              {banner.title}
+              {title}
             </h1>
             <span className="ikea-main-text ikea-title-18 ikea-banner__subtitle">
-              {banner.subtitle}
+              {subtitle}
             </span>
             <span className="ikea-main-text ikea-text-14 ikea-banner__period">
-              {banner.period}
+              {period}
             </span>
             <button className="ikea-btn ikea-btn_sm ikea-btn_blue ikea-banner__btn">
               <span className="ikea-main-text ikea-text-14">Shop now</span>
@@ -34,7 +52,11 @@ export default class Banner extends Component {
               </span>
             </button>
           </div>
-          <img src={banner.img} alt="" className="ikea-banner__img" />
+          {position === "right" ? (
+            <img src={img} alt="" className="ikea-banner__img" />
+          ) : (
+            ""
+          )}
         </div>
       </section>
     );
