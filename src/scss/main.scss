@@ -21,8 +21,6 @@
 @import "slider";
 @import "footer";
 
-//Slider
-
 * {
   padding: 0;
   margin: 0;
@@ -43,4 +41,7 @@ body {
   height: 1px;
   background-color: #eaebeb;
   margin-bottom: 20px;
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
 }

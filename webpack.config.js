@@ -77,7 +77,8 @@ module.exports = {
     ]
   },
   devServer: {
-    port: 6061
+    port: 6061,
+    host: "192.168.0.113"
   },
   devtool: "inline-source-map",
   plugins: [

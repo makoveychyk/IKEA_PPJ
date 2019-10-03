@@ -3,7 +3,11 @@
   align-items: center;
   justify-content: center;
   height: 700px;
+  margin: 50px 0;
   background-color: #fff;
+  @include media-breakpoint-up(lg) {
+    margin: 0;
+  }
   &__inner {
     display: flex;
     align-items: center;

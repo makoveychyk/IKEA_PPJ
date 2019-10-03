@@ -315,9 +315,6 @@ export default class Header extends Component {
               >
                 Sale
               </a>
-              <button className="ikea-btn ikea-btn_sm ikea-btn_blue ikea-main-text ikea-text-14">
-                Click
-              </button>
             </div>
           </div>
         </header>

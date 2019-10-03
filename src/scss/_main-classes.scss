@@ -18,6 +18,10 @@
     width: 32px;
     height: 32px;
   }
+  &:hover svg {
+    transition: all 0.15s linear;
+    fill: $yellow-3;
+  }
 }
 .ikea-btn {
   display: flex;

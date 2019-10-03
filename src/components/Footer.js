@@ -4,12 +4,12 @@ import ReactDOM from "react-dom";
 export default class Footer extends Component {
   render() {
     return (
-      <footer className="footer">
+      <footer className="ikea-footer">
         <div className="container">
           <div className="row">
-            <div className="col-xl-6">
-              <div className="footer__brand">
-                <a href="" className="footer__logo">
+            <div className="col-xl-5">
+              <div className="ikea-footer__brand">
+                <a href="" className="ikea-footer__logo">
                   <svg
                     width="118"
                     height="24"
@@ -23,157 +23,219 @@ export default class Footer extends Component {
                     />
                   </svg>
                 </a>
-                <p className="ikea-main-text ikea-text-12 footer__text">
+                <p className="ikea-main-text ikea-text-12 ikea-footer__text">
                   Founded by Ingvar Kamprad in 1943 as a tiny Swedish mail-order
                   catalogue business, today IKEA is a global home furnishing
                   brand that lives in the hearts of the many people.
                 </p>
               </div>
             </div>
-            <div className="col-xl-6">
-              <div className="footer__nav">
-                <div>
-                  <div className="row">
-                    <div className="col-12">
-                      <h5 className="footer__caption ikea-bold-text ikea-text-16">
-                        Information
-                      </h5>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-xl-6">
-                      <div className="footer__item footer__item_nav">
-                        <ul className="footer__list ikea-main-text ikea-text-14">
-                          <li className="footer__list-item">
-                            <a href="" className="footer__link">
-                              Contact us
-                            </a>
-                          </li>
+            <div className="col-xl-7">
+              <div className="ikea-footer__menu">
+                <div className="ikea-footer__nav">
+                  <h5 className="ikea-footer__caption ikea-bold-text ikea-text-16">
+                    Information
+                  </h5>
+                  <div className="ikea-footer__list-group">
+                    <ul className="ikea-footer__list ikea-main-text ikea-text-14">
+                      <li className="ikea-footer__item">
+                        <a href="" className="ikea-footer__link">
+                          Contact us
+                        </a>
+                      </li>
 
-                          <li className="footer__list-item">
-                            <a href="" className="footer__link">
-                              IKEA Planners
-                            </a>
-                          </li>
+                      <li className="ikea-footer__item">
+                        <a href="" className="ikea-footer__link">
+                          IKEA Planners
+                        </a>
+                      </li>
 
-                          <li className="footer__list-item">
-                            <a href="" className="footer__link">
-                              Customer Service
-                            </a>
-                          </li>
+                      <li className="ikea-footer__item">
+                        <a href="" className="ikea-footer__link">
+                          Customer Service
+                        </a>
+                      </li>
 
-                          <li className="footer__list-item">
-                            <a href="" className="footer__link">
-                              Guest purchase
-                            </a>
-                          </li>
-                          <li className="footer__list-item">
-                            <a href="" className="footer__link">
-                              Gift Card
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="col-xl-6">
-                      <div className="footer__item footer__item_nav">
-                        <ul className="footer__list ikea-main-text ikea-text-14">
-                          <li className="footer__list-item">
-                            <a href="" className="footer__link">
-                              IKEA Family
-                            </a>
-                          </li>
+                      <li className="ikea-footer__item">
+                        <a href="" className="ikea-footer__link">
+                          Guest purchase
+                        </a>
+                      </li>
+                      <li className="ikea-footer__item">
+                        <a href="" className="ikea-footer__link">
+                          Gift Card
+                        </a>
+                      </li>
+                    </ul>
+                    <ul className="ikea-footer__list ikea-main-text ikea-text-14">
+                      <li className="ikea-footer__item">
+                        <a href="" className="ikea-footer__link">
+                          IKEA Family
+                        </a>
+                      </li>
 
-                          <li className="footer__list-item">
-                            <a href="" className="footer__link">
-                              Returns
-                            </a>
-                          </li>
+                      <li className="ikea-footer__item">
+                        <a href="" className="ikea-footer__link">
+                          Returns
+                        </a>
+                      </li>
 
-                          <li className="footer__list-item">
-                            <a href="" className="footer__link">
-                              Payments
-                            </a>
-                          </li>
+                      <li className="ikea-footer__item">
+                        <a href="" className="ikea-footer__link">
+                          Payments
+                        </a>
+                      </li>
 
-                          <li className="footer__list-item">
-                            <a href="" className="footer__link">
-                              FAQ
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                      <li className="ikea-footer__item">
+                        <a href="" className="ikea-footer__link">
+                          FAQ
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-
-                <div className="footer__item footer__item_mail">
-                  <div className="footer__social">
-                    <span className="social-text ikea-main-text ikea-text-14">
-                      Socials:
+                <div className="ikea-footer__tools">
+                  <div className="ikea-footer__social">
+                    <span className="ikea-footer__caption ikea-bold-text ikea-text-16">
+                      Socials
                     </span>
-                    <div className="footer__icons social-icons social-icons_ml25">
-                      <a href="" className="social-icons__link">
-                        <svg
-                          width="16"
-                          height="16"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M6.01 4.02V5.8H4.5V8h1.51v6.5h3.11V8h2.09s.2-1.05.29-2.2H9.13V4.3c0-.22.34-.52.68-.52h1.69V1.5H9.2C5.94 1.5 6 3.7 6 4.02z" />
-                        </svg>
+                    <div className="ikea-footer__icons">
+                      <a href="" className="ikea-footer__social-link">
+                        <span className="ikea-icon ikea-icon_lg">
+                          <svg
+                            width="20"
+                            height="16"
+                            viewBox="0 0 20 16"
+                            fill="white"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M20 8C20 8 20 4.28 19.543 2.498C19.292 1.516 18.55 0.742 17.605 0.476C15.896 0 10 0 10 0C10 0 4.107 0 2.395 0.476C1.454 0.738 0.711 1.513 0.457 2.498C0 4.28 0 8 0 8C0 8 0 11.72 0.457 13.502C0.708 14.484 1.45 15.258 2.395 15.524C4.107 16 10 16 10 16C10 16 15.896 16 17.605 15.524C18.546 15.262 19.289 14.487 19.543 13.502C20 11.72 20 8 20 8ZM14 8L8 11.5V4.5L14 8Z"
+                            />
+                          </svg>
+                        </span>
                       </a>
-                      <a href="" className="social-icons__link">
-                        <svg
-                          width="16"
-                          height="16"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M6.01 4.02V5.8H4.5V8h1.51v6.5h3.11V8h2.09s.2-1.05.29-2.2H9.13V4.3c0-.22.34-.52.68-.52h1.69V1.5H9.2C5.94 1.5 6 3.7 6 4.02z" />
-                        </svg>
+                      <a href="" className="ikea-footer__social-link">
+                        <span className="ikea-icon ikea-icon_lg">
+                          <svg
+                            width="22"
+                            height="18"
+                            viewBox="0 0 22 18"
+                            fill="white"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M21.162 2.65607C20.3985 2.99376 19.589 3.21554 18.76 3.31407C19.6337 2.7915 20.2877 1.96908 20.6 1.00007C19.78 1.48807 18.881 1.83007 17.944 2.01507C16.6498 0.630387 14.5863 0.289156 12.9153 1.18352C11.2442 2.07788 10.3836 3.98421 10.818 5.82907C7.45501 5.66051 4.32174 4.07206 2.19799 1.45907C1.82628 2.09752 1.63095 2.82329 1.63199 3.56207C1.63199 5.01207 2.36999 6.29307 3.49199 7.04307C2.828 7.02216 2.17862 6.84285 1.59799 6.52007V6.57207C1.5984 8.5631 3.00151 10.2782 4.95299 10.6731C4.33661 10.8401 3.6903 10.8647 3.06299 10.7451C3.61012 12.4493 5.18044 13.6168 6.96999 13.6501C5.21793 15.0261 2.99073 15.6492 0.778992 15.3821C2.69069 16.6115 4.91609 17.2642 7.18899 17.2621C14.882 17.2621 19.089 10.8891 19.089 5.36207C19.089 5.18207 19.084 5.00007 19.076 4.82207C19.8949 4.23023 20.6016 3.49709 21.163 2.65707L21.162 2.65607Z" />
+                          </svg>
+                        </span>
                       </a>
-                      <a href="" className="social-icons__link">
-                        <svg
-                          width="16"
-                          height="16"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M6.01 4.02V5.8H4.5V8h1.51v6.5h3.11V8h2.09s.2-1.05.29-2.2H9.13V4.3c0-.22.34-.52.68-.52h1.69V1.5H9.2C5.94 1.5 6 3.7 6 4.02z" />
-                        </svg>
+                      <a href="" className="ikea-footer__social-link">
+                        <span className="ikea-icon ikea-icon_lg">
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="white"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M14.122 0.06C13.056 0.01 12.717 0 10 0C7.283 0 6.944 0.013 5.878 0.06C4.812 0.11 4.088 0.277 3.45 0.525C2.78243 0.775729 2.17767 1.16923 1.678 1.678C1.1688 2.17732 0.775236 2.78218 0.525 3.45C0.277 4.088 0.11 4.812 0.06 5.878C0.01 6.944 0 7.283 0 10C0 12.717 0.013 13.056 0.06 14.122C0.11 15.187 0.277 15.913 0.525 16.55C0.775931 17.2175 1.16941 17.8222 1.678 18.322C2.17753 18.8309 2.78233 19.2245 3.45 19.475C4.088 19.722 4.813 19.89 5.878 19.94C6.944 19.99 7.283 20 10 20C12.717 20 13.056 19.987 14.122 19.94C15.187 19.89 15.913 19.722 16.55 19.475C17.2173 19.2238 17.822 18.8303 18.322 18.322C18.8311 17.8226 19.2247 17.2178 19.475 16.55C19.722 15.912 19.89 15.187 19.94 14.122C19.99 13.056 20 12.717 20 10C20 7.283 19.987 6.944 19.94 5.878C19.89 4.813 19.722 4.087 19.475 3.45C19.224 2.78259 18.8305 2.1779 18.322 1.678C17.766 1.123 17.21 0.779 16.55 0.525C15.912 0.277 15.187 0.11 14.122 0.06ZM10 2C7.526 2 7.122 2.007 5.971 2.058C5.187 2.095 4.661 2.2 4.173 2.39C3.739 2.558 3.426 2.759 3.093 3.093C2.78001 3.3954 2.53935 3.76458 2.389 4.173C2.199 4.663 2.094 5.188 2.058 5.971C2.006 7.075 2 7.461 2 10C2 12.474 2.007 12.878 2.058 14.029C2.095 14.812 2.2 15.339 2.389 15.826C2.559 16.261 2.759 16.574 3.091 16.906C3.428 17.242 3.741 17.443 4.171 17.609C4.665 17.8 5.191 17.906 5.971 17.942C7.075 17.994 7.461 18 10 18C12.474 18 12.878 17.993 14.029 17.942C14.811 17.905 15.338 17.8 15.826 17.611C16.259 17.442 16.574 17.241 16.906 16.909C17.243 16.572 17.444 16.259 17.61 15.829C17.8 15.336 17.906 14.809 17.942 14.029C17.994 12.925 18 12.539 18 10C18 7.526 17.993 7.122 17.942 5.971C17.905 5.189 17.8 4.661 17.61 4.173C17.4593 3.765 17.2191 3.39596 16.907 3.093C16.6047 2.77985 16.2355 2.53917 15.827 2.389C15.337 2.199 14.811 2.094 14.029 2.058C12.925 2.006 12.539 2 10 2ZM15.25 6C15.9404 6 16.5 5.44036 16.5 4.75C16.5 4.05964 15.9404 3.5 15.25 3.5C14.5596 3.5 14 4.05964 14 4.75C14 5.44036 14.5596 6 15.25 6ZM10 5C12.7614 5 15 7.23858 15 10C15 12.7614 12.7614 15 10 15C7.23858 15 5 12.7614 5 10C5 7.23858 7.23858 5 10 5ZM10 7C8.34315 7 7 8.34315 7 10C7 11.6569 8.34315 13 10 13C11.6569 13 13 11.6569 13 10C13 8.34315 11.6569 7 10 7Z"
+                            />
+                          </svg>
+                        </span>
                       </a>
-                      <a href="" className="social-icons__link">
-                        <svg
-                          width="16"
-                          height="16"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M6.01 4.02V5.8H4.5V8h1.51v6.5h3.11V8h2.09s.2-1.05.29-2.2H9.13V4.3c0-.22.34-.52.68-.52h1.69V1.5H9.2C5.94 1.5 6 3.7 6 4.02z" />
-                        </svg>
+                      <a href="" className="ikea-footer__social-link">
+                        <span className="ikea-icon ikea-icon_lg">
+                          <svg
+                            width="11"
+                            height="20"
+                            viewBox="0 0 11 20"
+                            fill="white"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M7 11.5H9.5L10.5 7.5H7V5.5C7 4.47 7 3.5 9 3.5H10.5V0.14C10.174 0.097 8.943 0 7.643 0C4.928 0 3 1.657 3 4.7V7.5H0V11.5H3V20H7V11.5Z" />
+                          </svg>
+                        </span>
                       </a>
                     </div>
                   </div>
-                  <h5 className="footer__caption ikea-bold-text ikea-text-16">
-                    Subscribe to our newsletter
+                  <h5 className="ikea-footer__caption ikea-bold-text ikea-text-16">
+                    Stay In Touch
                   </h5>
-                  <form action="" className="input-fild footer__fild">
-                    <input type="text" className="input input_inp" />
-                    <input type="text" className="btn btn_inp" />
-                  </form>
+                  <label action="" className="ikea-footer__fild">
+                    <span className="ikea-icon ikea-icon_lg ikea-footer__mail-icon">
+                      <svg
+                        width="21"
+                        height="21"
+                        viewBox="0 0 21 21"
+                        fill="white"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M0.946082 7.31498C0.424082 7.14098 0.419082 6.85998 0.956082 6.68098L20.0431 0.318979C20.5721 0.142979 20.8751 0.438979 20.7271 0.956979L15.2731 20.043C15.1231 20.572 14.8181 20.59 14.5941 20.088L11.0001 12L17.0001 3.99998L9.00008 9.99998L0.946082 7.31498Z" />
+                      </svg>
+                    </span>
+                    <input
+                      type="text"
+                      className="ikea-footer__input ikea-main-text ikea-text-14"
+                      placeholder="Enter your email, please"
+                    />
+                  </label>
                 </div>
               </div>
             </div>
           </div>
-          <div className="footer__line"></div>
-          <div className="row justify-content-between footer__designer">
-            <div className="col-12 col-lg-6">
-              <span className="footer__btext footer__btext_copy">
-                2019 © All rights reserved. PVLSE
-              </span>
-            </div>
-            <div className="col-12 col-lg-6">
-              <a href="" className="footer__btext footer__btext_lanp">
-                Designed by Lanp.
-              </a>
-            </div>
+          <div className="ikea-footer__line"></div>
+          <div className="row justify-content-between ikea-footer__bottom-info">
+            <span className="ikea-main-text ikea-text-12 ikea-footer__designed">
+              © Inter IKEA Systems B.V. 1999-2019
+            </span>
+
+            <ul className="ikea-footer__submenu ikea-main-text ikea-text-12">
+              <li className="ikea-footer__submenu-item">
+                <a href="" className="ikea-footer__submenu-link">
+                  <span className="ikea-icon ikea-icon_md ikea-footer__submenu-icon">
+                    <svg
+                      width="16"
+                      height="12"
+                      viewBox="0 0 16 12"
+                      fill="#D4D5D7"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M14 0.333333C13.26 0.1 12.4467 0 11.6667 0C10.3667 0 8.96669 0.266667 8.00002 1C7.03335 0.266667 5.63335 0 4.33335 0C3.03335 0 1.63335 0.266667 0.666687 1V10.7667C0.666687 10.9333 0.833354 11.1 1.00002 11.1C1.06669 11.1 1.10002 11.0667 1.16669 11.0667C2.06669 10.6333 3.36669 10.3333 4.33335 10.3333C5.63335 10.3333 7.03335 10.6 8.00002 11.3333C8.90002 10.7667 10.5334 10.3333 11.6667 10.3333C12.7667 10.3333 13.9 10.5333 14.8334 11.0333C14.9 11.0667 14.9334 11.0667 15 11.0667C15.1667 11.0667 15.3334 10.9 15.3334 10.7333V1C14.9334 0.7 14.5 0.5 14 0.333333ZM14 9.33333C13.2667 9.1 12.4667 9 11.6667 9C10.5334 9 8.90002 9.43333 8.00002 10V2.33333C8.90002 1.76667 10.5334 1.33333 11.6667 1.33333C12.4667 1.33333 13.2667 1.43333 14 1.66667V9.33333Z" />
+                    </svg>
+                  </span>
+                  IKEA Catalogue
+                </a>
+              </li>
+              <li className="ikea-footer__submenu-item">
+                <a href="" className="ikea-footer__submenu-link">
+                  <span className="ikea-icon ikea-icon_md ikea-footer__submenu-icon">
+                    <svg
+                      width="12"
+                      height="15"
+                      viewBox="0 0 12 15"
+                      fill="#D4D5D7"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M6 14.8187L1.75733 10.576C-0.585791 8.23284 -0.585776 4.43386 1.75737 2.09072C4.10051 -0.25241 7.89949 -0.25241 10.2426 2.09072C12.5858 4.43386 12.5858 8.23284 10.2427 10.576L6 14.8187ZM9.3 9.63332C11.1223 7.81083 11.1222 4.85614 9.29978 3.03377C7.47734 1.2114 4.52266 1.2114 2.70022 3.03377C0.877791 4.85614 0.87769 7.81083 2.7 9.63332L6 12.9333L9.3 9.63332ZM4.66667 6.33333C4.66667 7.06971 5.26362 7.66666 6 7.66666C6.73638 7.66666 7.33333 7.06971 7.33333 6.33333C7.33333 5.59695 6.73638 4.99999 6 4.99999C5.26362 4.99999 4.66667 5.59695 4.66667 6.33333Z"
+                      />
+                    </svg>
+                  </span>
+                  Find a location
+                </a>
+              </li>
+              <li className="ikea-footer__submenu-item">
+                <a href="" className="ikea-footer__submenu-link">
+                  United States
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </footer>

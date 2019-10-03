@@ -13,7 +13,7 @@
   transition: all 0.15s linear;
   z-index: 100;
   &_open {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 130px);
   }
   &__login {
     display: flex;
