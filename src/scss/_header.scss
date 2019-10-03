@@ -4,7 +4,9 @@
   // font-family: "Roboto" sans-serif;
   // font-family: "Helvetica Neue Bold" sans-serif;
   // position: absolute;
-  position: relative;
+  position: fixed;
+  z-index: 200;
+  top: 0;
   & .container {
     padding-left: 0;
     padding-right: 0;
