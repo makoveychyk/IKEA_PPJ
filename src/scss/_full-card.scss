@@ -63,4 +63,110 @@
   &__vote {
     color: $grey-3;
   }
+  &__color-editor {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  &__color-radio {
+    display: none;
+    & + .ikea-full-card__color .ikea-icon {
+      visibility: hidden;
+    }
+    &:checked + .ikea-full-card__color .ikea-icon {
+      visibility: visible;
+    }
+  }
+  &__color {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $grey-1;
+    border-radius: 50%;
+    &:not(:last-child) {
+      margin: 0px 10px 0 30px;
+    }
+  }
+  &__size-editor {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+  }
+  &__size-radio {
+    display: none;
+    &:checked + .ikea-full-card__size {
+      border: 2px solid $yellow-3;
+      z-index: 100;
+    }
+  }
+  &__size {
+    display: block;
+    padding: 10px 15px;
+    border: 1px solid #bfc1c3;
+    &:not(:nth-child(2)) {
+      position: relative;
+      left: -1px;
+    }
+    &:nth-child(2) {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    &:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      position: relative;
+      left: -2px;
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  &__status {
+    color: $success;
+    margin-left: 8px;
+    &_wrong {
+      color: #f26d6d;
+    }
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__full-price {
+    color: $grey-8;
+    margin-right: 15px;
+    &_sale {
+      color: $grey-3;
+      text-decoration: line-through;
+      font-weight: 500;
+    }
+  }
+  &__sale-price {
+    color: $grey-8;
+  }
+  &__btn {
+    margin-right: 20px;
+    &_disabled {
+      background-color: #fff7cc;
+      cursor: not-allowed;
+      &:hover {
+        transform: none;
+      }
+      &:active {
+        background-color: #fff7cc;
+      }
+    }
+  }
+  &__basket {
+    margin-right: 8px;
+  }
+  &__add {
+    display: flex;
+    align-items: center;
+  }
 }

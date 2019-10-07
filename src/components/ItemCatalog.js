@@ -7,7 +7,7 @@ export default class ItemCatalog extends Component {
     return (
       <section className="ikea-catalog">
         {productData.map((item, index) => (
-          <ItemCard data={item}></ItemCard>
+          <ItemCard data={item} key={index}></ItemCard>
         ))}
       </section>
     );
