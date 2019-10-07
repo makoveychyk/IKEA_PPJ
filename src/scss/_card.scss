@@ -1,0 +1,94 @@
+.ikea-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  height: 350px;
+  margin: 10px;
+  padding: 20px 30px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all 0.15s linear;
+  cursor: pointer;
+  @include media-breakpoint-up(lg) {
+    max-width: 255px;
+    height: 300px;
+  }
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+  }
+  &__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    padding-top: 30px;
+  }
+  &__picture {
+    width: 120px;
+    height: 120px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__img {
+    height: 100%;
+    max-width: unset;
+  }
+  &__content {
+    margin-left: 0;
+    margin-right: auto;
+    height: 70px;
+  }
+  &__title {
+    margin-bottom: 5px;
+    color: $grey-8;
+  }
+  &__subtitle {
+    color: $grey-6;
+  }
+  &__price {
+    color: $grey-8;
+  }
+  &__tool {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__sale {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 10px;
+    border-radius: 3px;
+    color: $danger-4;
+    border: 1px solid $danger-4;
+  }
+  &__basket {
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.1s linear;
+  }
+  &__arrow {
+    margin-left: 8px;
+  }
+}

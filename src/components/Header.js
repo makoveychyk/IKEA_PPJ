@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import classNames from "classnames";
 import Menu from "./Menu";
 import Burger from "../icons/Burger";
 import Close from "../icons/Close";

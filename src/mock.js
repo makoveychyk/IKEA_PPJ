@@ -32,10 +32,22 @@ export const newProducts = {
   period: "August 15 - September 21"
 };
 
+export const footerMenuData = [
+  { title: "Contact us" },
+  { title: "IKEA Planners" },
+  { title: "Customer Service" },
+  { title: "Guest purchase" },
+  { title: "Gift Card" },
+  { title: "IKEA Family" },
+  { title: "Returns" },
+  { title: "Payments" },
+  { title: "FAQ" }
+];
+
 export const productData = [
   {
-    img: "img/basket.png",
-    tag: "sale",
+    img: "img/basket",
+    tag: "",
     title: "KNAGGLIG",
     subtitle: "Plant pot, indoor/outdoor gray, 3 ½ ",
     rate: "4.5/5.0",
@@ -48,8 +60,8 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
-    img: "img/basket_2.png",
-    tag: "sale",
+    img: "img/basket_2",
+    tag: "Sale",
     title: "STORSTABBE",
     subtitle: "Box, pine, 23x31x15 cm",
     rate: "4.5/5.0",
@@ -62,8 +74,8 @@ export const productData = [
     material: "Scandinavian Oak"
   },
   {
-    img: "img/bed_box.png",
-    tag: "sale",
+    img: "img/bed_box",
+    tag: "",
     title: "GNABBAS",
     subtitle: "Box with handle, acacia",
     rate: "4.5/5.0",
@@ -76,8 +88,8 @@ export const productData = [
     material: "Olive palm"
   },
   {
-    img: "img/box.png",
-    tag: "sale",
+    img: "img/box",
+    tag: "",
     title: "SKOGSTA",
     subtitle: "9-bottle wine rack, solid wood",
     rate: "4.5/5.0",
@@ -90,8 +102,8 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
-    img: "img/box_2.png",
-    tag: "sale",
+    img: "img/box_2",
+    tag: "Sale",
     title: "HUTTEN",
     subtitle: "Basket, rattan, 32x34x32 cm",
     rate: "4.5/5.0",
@@ -104,8 +116,8 @@ export const productData = [
     material: "Scandinavian Oak"
   },
   {
-    img: "img/flower_box.png",
-    tag: "sale",
+    img: "img/flower_box",
+    tag: "",
     title: "BRANÄS",
     subtitle: "Basket, seagrass, 25 cm",
     rate: "4.5/5.0",
@@ -118,8 +130,8 @@ export const productData = [
     material: "Olive palm"
   },
   {
-    img: "img/grey_pot.png",
-    tag: "sale",
+    img: "img/grey_pot",
+    tag: "Sale",
     title: "FLÅDIS",
     subtitle: "Plant pot with holder, indoor/outdoor, white, 6 ",
     rate: "4.5/5.0",
@@ -132,8 +144,8 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
-    img: "img/handle_box.png",
-    tag: "sale",
+    img: "img/handle_box",
+    tag: "Sale",
     title: "KNIPSA",
     subtitle: "Laundry basket, 50 l",
     rate: "4.5/5.0",
@@ -146,8 +158,8 @@ export const productData = [
     material: "Scandinavian Oak"
   },
   {
-    img: "img/laundry_basket.png",
-    tag: "sale",
+    img: "img/laundry_basket",
+    tag: "",
     title: "MOPPE",
     subtitle: "Box, pine, 23x31x15 cm",
     rate: "4.5/5.0",
@@ -160,8 +172,8 @@ export const productData = [
     material: "Olive palm"
   },
   {
-    img: "img/mini_chest.png",
-    tag: "sale",
+    img: "img/mini_chest",
+    tag: "Sale",
     title: "BRANKIS",
     subtitle: "Box with lid, beige, 25x35x15 cm",
     rate: "4.5/5.0",
@@ -174,8 +186,8 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
-    img: "img/nightstand.png",
-    tag: "sale",
+    img: "img/nightstand",
+    tag: "",
     title: "RÅGRUND",
     subtitle: "Basket, 32x35x32 cm",
     rate: "4.5/5.0",
@@ -188,8 +200,8 @@ export const productData = [
     material: "Scandinavian Oak"
   },
   {
-    img: "img/oval_basket.png",
-    tag: "sale",
+    img: "img/oval_basket",
+    tag: "Sale",
     title: "RÖMSKOG",
     subtitle: "Box with handle, acacia",
     rate: "4.5/5.0",
@@ -202,8 +214,8 @@ export const productData = [
     material: "Olive palm"
   },
   {
-    img: "img/plant.png",
-    tag: "sale",
+    img: "img/plant",
+    tag: "",
     title: "BRANÄS",
     subtitle: "9-bottle wine rack, solid wood",
     rate: "4.5/5.0",
@@ -216,8 +228,8 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
-    img: "img/rack_chair.png",
-    tag: "sale",
+    img: "img/rack_chair",
+    tag: "Sale",
     title: "BRANÄS",
     subtitle: "Basket, rattan, 32x34x32 cm",
     rate: "4.5/5.0",
@@ -230,8 +242,8 @@ export const productData = [
     material: "Scandinavian Oak"
   },
   {
-    img: "img/rack.png",
-    tag: "sale",
+    img: "img/rack",
+    tag: "",
     title: "BRANÄS",
     subtitle: "Basket, seagrass, 25 cm",
     rate: "4.5/5.0",
@@ -244,8 +256,8 @@ export const productData = [
     material: "Olive palm"
   },
   {
-    img: "img/white_pot.png",
-    tag: "sale",
+    img: "img/white_pot",
+    tag: "",
     title: "BRANÄS",
     subtitle: "Basket, seagrass, 32x33x32 cm",
     rate: "4.5/5.0",
@@ -258,8 +270,8 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
-    img: "img/rack.png",
-    tag: "sale",
+    img: "img/rack",
+    tag: "Sale",
     title: "FLÅDIS",
     subtitle: "Mini chest of drawers, birch plywood",
     rate: "4.5/5.0",
@@ -272,8 +284,8 @@ export const productData = [
     material: "Scandinavian Oak"
   },
   {
-    img: "img/rack.png",
-    tag: "sale",
+    img: "img/rack",
+    tag: "",
     title: "HUTTEN",
     subtitle: "Laundry basket, 50 l",
     rate: "4.5/5.0",
@@ -286,8 +298,8 @@ export const productData = [
     material: "Olive palm"
   },
   {
-    img: "img/rack.png",
-    tag: "sale",
+    img: "img/rack",
+    tag: "",
     title: "SKURAR",
     subtitle: "Towel rack chair, bamboo",
     rate: "4.5/5.0",
@@ -300,8 +312,8 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
-    img: "img/rack.png",
-    tag: "sale",
+    img: "img/rack",
+    tag: "Sale",
     title: "BRANÄS",
     subtitle: "Bed storage box, rattan, 65x70 cm",
     rate: "4.5/5.0",

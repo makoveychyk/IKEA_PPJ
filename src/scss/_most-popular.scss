@@ -1,0 +1,13 @@
+.ikea-most-popular {
+  background-color: $bg-1;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+  }
+  &__title {
+    color: $grey-8;
+    text-align: center;
+  }
+}

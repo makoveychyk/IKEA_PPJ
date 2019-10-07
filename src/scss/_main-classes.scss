@@ -34,6 +34,7 @@
   cursor: pointer;
   border-radius: 5px;
   color: #fff;
+  transition: all 0.15s linear;
   &_sm {
     max-width: 140px;
   }
@@ -51,5 +52,8 @@
     &:active {
       background-color: $blue-3;
     }
+  }
+  &:hover {
+    transform: scale(1.1);
   }
 }
