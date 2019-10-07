@@ -82,6 +82,7 @@
     align-items: center;
     justify-content: center;
     width: 24px;
+    cursor: pointer;
     height: 24px;
     border: 1px solid $grey-1;
     border-radius: 50%;
@@ -105,6 +106,7 @@
     display: block;
     padding: 10px 15px;
     border: 1px solid #bfc1c3;
+    cursor: pointer;
     &:not(:nth-child(2)) {
       position: relative;
       left: -1px;
