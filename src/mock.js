@@ -55,7 +55,7 @@ export const productData = [
     color: ["#72520D", "#C6B082"],
     status: false,
     fullPrice: "10$",
-    salePrice: "5$",
+    salePrice: "",
     category: "Home safety",
     material: "Ancient cherry"
   },
@@ -64,9 +64,10 @@ export const productData = [
     tag: "Sale",
     title: "STORSTABBE",
     subtitle: "Box, pine, 23x31x15 cm",
-    rate: "4.5/5.0",
+    rate: "5.0/5.0",
     size: ["210*60*30", "210*70*20", "180*80*40"],
     color: ["#72520D", "#C6B082"],
+    votes: "18 votes",
     status: false,
     fullPrice: "10$",
     salePrice: "5$",
@@ -83,13 +84,13 @@ export const productData = [
     color: ["#72520D", "#C6B082"],
     status: false,
     fullPrice: "10$",
-    salePrice: "5$",
+    salePrice: "",
     category: "IKEA Food",
     material: "Olive palm"
   },
   {
     img: "img/box",
-    tag: "",
+    tag: "Sale",
     title: "SKOGSTA",
     subtitle: "9-bottle wine rack, solid wood",
     rate: "4.5/5.0",
@@ -117,7 +118,7 @@ export const productData = [
   },
   {
     img: "img/flower_box",
-    tag: "",
+    tag: "Sale",
     title: "BRANÄS",
     subtitle: "Basket, seagrass, 25 cm",
     rate: "4.5/5.0",
@@ -131,7 +132,7 @@ export const productData = [
   },
   {
     img: "img/grey_pot",
-    tag: "Sale",
+    tag: "",
     title: "FLÅDIS",
     subtitle: "Plant pot with holder, indoor/outdoor, white, 6 ",
     rate: "4.5/5.0",
@@ -139,7 +140,7 @@ export const productData = [
     color: ["#72520D", "#C6B082"],
     status: false,
     fullPrice: "10$",
-    salePrice: "5$",
+    salePrice: "",
     category: "Home improvement",
     material: "Ancient cherry"
   },
@@ -167,7 +168,7 @@ export const productData = [
     color: ["#72520D", "#C6B082"],
     status: false,
     fullPrice: "10$",
-    salePrice: "5$",
+    salePrice: "",
     category: "Storage & Home Organization",
     material: "Olive palm"
   },
@@ -187,7 +188,7 @@ export const productData = [
   },
   {
     img: "img/nightstand",
-    tag: "",
+    tag: "Sale",
     title: "RÅGRUND",
     subtitle: "Basket, 32x35x32 cm",
     rate: "4.5/5.0",
@@ -201,7 +202,7 @@ export const productData = [
   },
   {
     img: "img/oval_basket",
-    tag: "Sale",
+    tag: "",
     title: "RÖMSKOG",
     subtitle: "Box with handle, acacia",
     rate: "4.5/5.0",
@@ -209,7 +210,7 @@ export const productData = [
     color: ["#72520D", "#C6B082"],
     status: false,
     fullPrice: "10$",
-    salePrice: "5$",
+    salePrice: "",
     category: "Home improvement",
     material: "Olive palm"
   },
@@ -223,13 +224,13 @@ export const productData = [
     color: ["#72520D", "#C6B082"],
     status: false,
     fullPrice: "10$",
-    salePrice: "5$",
+    salePrice: "",
     category: "IKEA Food",
     material: "Ancient cherry"
   },
   {
     img: "img/rack_chair",
-    tag: "Sale",
+    tag: "",
     title: "BRANÄS",
     subtitle: "Basket, rattan, 32x34x32 cm",
     rate: "4.5/5.0",
@@ -237,7 +238,7 @@ export const productData = [
     color: ["#72520D", "#C6B082"],
     status: false,
     fullPrice: "10$",
-    salePrice: "5$",
+    salePrice: "",
     category: "Storage & Home Organization",
     material: "Scandinavian Oak"
   },
@@ -257,7 +258,7 @@ export const productData = [
   },
   {
     img: "img/white_pot",
-    tag: "",
+    tag: "Sale",
     title: "BRANÄS",
     subtitle: "Basket, seagrass, 32x33x32 cm",
     rate: "4.5/5.0",
@@ -293,7 +294,7 @@ export const productData = [
     color: ["#72520D", "#C6B082"],
     status: false,
     fullPrice: "10$",
-    salePrice: "5$",
+    salePrice: "",
     category: "IKEA Food",
     material: "Olive palm"
   },
@@ -307,7 +308,7 @@ export const productData = [
     color: ["#72520D", "#C6B082"],
     status: false,
     fullPrice: "10$",
-    salePrice: "5$",
+    salePrice: "",
     category: "Storage & Home Organization",
     material: "Ancient cherry"
   },

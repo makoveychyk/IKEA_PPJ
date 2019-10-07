@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import SimpleSlider from "../components/SimpleSlider";
 import MostPopular from "../components/MostPopular";
 import { productData } from "../mock";
+import FullCard from "../components/FullCard";
 
 class HomePage extends Component {
   render() {
@@ -15,6 +16,7 @@ class HomePage extends Component {
         <SimpleSlider></SimpleSlider>
         <NewProducts></NewProducts>
         <MostPopular></MostPopular>
+        <FullCard />
         <Footer></Footer>
       </>
     );

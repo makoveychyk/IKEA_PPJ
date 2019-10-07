@@ -1,0 +1,66 @@
+.ikea-full-card {
+  display: flex;
+  justify-content: center;
+  &__inner {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  &__picture {
+    width: 340px;
+    height: 340px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__img {
+    height: 100%;
+    max-width: unset;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    @include media-breakpoint-up(lg) {
+      margin-top: 0px;
+    }
+  }
+  &__sale {
+    position: static;
+    display: block;
+    width: 45px;
+    margin-bottom: 15px;
+  }
+  &__title {
+    color: $grey-8;
+    margin-bottom: 5px;
+  }
+  &__subtitle {
+    color: #696e73;
+    margin-bottom: 12px;
+  }
+  &__rating {
+    display: flex;
+    align-items: center;
+  }
+
+  &__stars {
+    display: flex;
+  }
+  &__rate {
+    color: $grey-7;
+    margin: 0 16px;
+  }
+  &__vote {
+    color: $grey-3;
+  }
+}

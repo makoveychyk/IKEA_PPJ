@@ -23,7 +23,8 @@ export default class ItemCard extends Component {
       fullPrice,
       salePrice,
       category,
-      material
+      material,
+      votes
     } = this.props.data;
     return (
       <div className="ikea-card">
@@ -47,9 +48,20 @@ export default class ItemCard extends Component {
           </div>
           {}
           <div className="ikea-card__tool">
-            <span className="ikea-bold-text ikea-text-16 ikea-card__price">
-              {fullPrice}
-            </span>
+            <div className="ikea-card__price">
+              <span
+                className={`${salePrice === "" &&
+                  "ikea-bold-text"} ikea-text-16 ikea-card__full-price ${salePrice !==
+                  "" && "ikea-card__full-price_sale ikea-main-text"}`}
+              >
+                {fullPrice}
+              </span>
+              {salePrice !== "" && (
+                <span className="ikea-bold-text ikea-text-16 ikea-card__sale-price">
+                  {salePrice}
+                </span>
+              )}
+            </div>
             {isAdd === false ? (
               <button
                 className="ikea-icon ikea-icon_md ikea-card__basket"

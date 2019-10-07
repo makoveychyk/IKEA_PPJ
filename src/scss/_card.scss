@@ -56,6 +56,19 @@
     color: $grey-6;
   }
   &__price {
+    display: flex;
+    align-items: center;
+  }
+  &__full-price {
+    color: $grey-8;
+    margin-right: 5px;
+    &_sale {
+      color: $grey-4;
+      text-decoration: line-through;
+      font-weight: 500;
+    }
+  }
+  &__sale-price {
     color: $grey-8;
   }
   &__tool {
