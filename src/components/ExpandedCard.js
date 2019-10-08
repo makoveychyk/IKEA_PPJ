@@ -9,7 +9,7 @@ import Wrong from "../icons/Wrong";
 import Basket from "../icons/Basket";
 import WishOutline from "../icons/WishOutline";
 
-export default class FullCard extends Component {
+export default class ExpandedCard extends Component {
   state = {
     isAvtive: true
   };
@@ -28,7 +28,7 @@ export default class FullCard extends Component {
       category,
       material,
       votes
-    } = productData[1];
+    } = productData[0];
     const { isAvtive } = this.state;
     // const renderStars = () => {
     //   for (const index = 0; index < 5; index++) {
@@ -41,31 +41,31 @@ export default class FullCard extends Component {
     // };
     return (
       <>
-        <section className="ikea-full-card">
+        <section className="ikea-exp-card">
           <div className="container">
-            <div className="ikea-full-card__inner">
-              <div className="ikea-full-card__picture">
+            <div className="ikea-exp-card__inner">
+              <div className="ikea-exp-card__picture">
                 <img
                   src={`${img}.png`}
                   srcSet={`${img}@2x.png 2x, ${img}@3x.png 3x`}
                   alt=""
-                  className="ikea-full-card__img"
+                  className="ikea-exp-card__img"
                 />
               </div>
-              <div className="ikea-full-card__content">
+              <div className="ikea-exp-card__content">
                 {tag !== "" && (
-                  <span className="ikea-main-text ikea-text-12 ikea-card__sale ikea-full-card__sale">
+                  <span className="ikea-main-text ikea-text-12 ikea-card__sale ikea-exp-card__sale">
                     {tag}
                   </span>
                 )}
-                <h2 className="ikea-bold-text ikea-title-24 ikea-full-card__title">
+                <h2 className="ikea-bold-text ikea-title-24 ikea-exp-card__title">
                   {title}
                 </h2>
-                <span className="ikea-main-text ikea-text-14 ikea-full-card__subtitle">
+                <span className="ikea-main-text ikea-text-14 ikea-exp-card__subtitle">
                   {subtitle}
                 </span>
-                <div className="ikea-full-card__rating">
-                  <div className="ikea-full-card__stars">
+                <div className="ikea-exp-card__rating">
+                  <div className="ikea-exp-card__stars">
                     {/* {renderStars()} */}
                     <span className="ikea-icon ikea-icon_md">
                       <Star />
@@ -84,14 +84,14 @@ export default class FullCard extends Component {
                     </span>
                   </div>
 
-                  <span className="ikea-main-text ikea-text-12 ikea-full-card__rate">
+                  <span className="ikea-main-text ikea-text-12 ikea-exp-card__rate">
                     {rate}
                   </span>
-                  <span className="ikea-main-text ikea-text-12 ikea-full-card__vote">
+                  <span className="ikea-main-text ikea-text-12 ikea-exp-card__vote">
                     {votes}
                   </span>
                 </div>
-                <div className="ikea-full-card__size-editor">
+                <div className="ikea-exp-card__size-editor">
                   {size.map((item, id) => {
                     return (
                       <>
@@ -100,11 +100,11 @@ export default class FullCard extends Component {
                           name="size"
                           id={id}
                           defaultChecked
-                          className="ikea-full-card__size-radio"
+                          className="ikea-exp-card__size-radio"
                         />
                         <label
                           htmlFor={id}
-                          className="ikea-medium-text ikea-text-14 ikea-full-card__size"
+                          className="ikea-medium-text ikea-text-14 ikea-exp-card__size"
                         >
                           {item}
                         </label>
@@ -113,18 +113,18 @@ export default class FullCard extends Component {
                   })}
                 </div>
 
-                <div className="ikea-full-card__color-editor">
+                <div className="ikea-exp-card__color-editor">
                   <span className="ikea-medium-text ikea-text-14">Color</span>
                   <input
                     type="radio"
                     name="color"
                     id="one"
-                    className="ikea-full-card__color-radio"
+                    className="ikea-exp-card__color-radio"
                     checked
                   />
                   <label
                     htmlFor="one"
-                    className="ikea-full-card__color"
+                    className="ikea-exp-card__color"
                     style={{ backgroundColor: color[0] }}
                   >
                     <span className="ikea-icon ikea-icon_md">
@@ -135,11 +135,11 @@ export default class FullCard extends Component {
                     type="radio"
                     name="color"
                     id="two"
-                    className="ikea-full-card__color-radio"
+                    className="ikea-exp-card__color-radio"
                   />
                   <label
                     htmlFor="two"
-                    className="ikea-full-card__color"
+                    className="ikea-exp-card__color"
                     style={{ backgroundColor: color[1] }}
                   >
                     <span className="ikea-icon ikea-icon_md">
@@ -147,41 +147,41 @@ export default class FullCard extends Component {
                     </span>
                   </label>
                 </div>
-                <div className="ikea-full-card__info">
+                <div className="ikea-exp-card__info">
                   <span className="ikea-icon ikea-icon_sm">
                     {status !== false ? <Success /> : <Wrong />}
                   </span>
                   {status !== false ? (
-                    <span className="ikea-medium-text ikea-text-12 ikea-full-card__status">
+                    <span className="ikea-medium-text ikea-text-12 ikea-exp-card__status">
                       Available for order
                     </span>
                   ) : (
-                    <span className="ikea-medium-text ikea-text-12 ikea-full-card__status ikea-full-card__status_wrong">
+                    <span className="ikea-medium-text ikea-text-12 ikea-exp-card__status ikea-exp-card__status_wrong">
                       Not available
                     </span>
                   )}
                 </div>
-                <div className="ikea-full-card__price">
+                <div className="ikea-exp-card__price">
                   <span
                     className={`${salePrice === "" &&
-                      "ikea-bold-text ikea-title-24"}  ikea-full-card__full-price ${salePrice !==
+                      "ikea-bold-text ikea-title-24"}  ikea-exp-card__full-price ${salePrice !==
                       "" &&
-                      "ikea-full-card__full-price_sale ikea-main-text ikea-text-14"}`}
+                      "ikea-exp-card__full-price_sale ikea-main-text ikea-text-14"}`}
                   >
                     {fullPrice}
                   </span>
                   {salePrice !== "" && (
-                    <span className="ikea-bold-text ikea-title-24 ikea-full-card__sale-price">
+                    <span className="ikea-bold-text ikea-title-24 ikea-exp-card__sale-price">
                       {salePrice}
                     </span>
                   )}
                 </div>
-                <div className="ikea-full-card__add">
+                <div className="ikea-exp-card__add">
                   <button
-                    className={`ikea-btn ikea-btn_md ikea-btn_yellow ikea-full-card__btn ikea-medium-text ikea-text-14 ${status ===
-                      false && "ikea-full-card__btn_disabled"}`}
+                    className={`ikea-btn ikea-btn_md ikea-btn_yellow ikea-exp-card__btn ikea-medium-text ikea-text-14 ${status ===
+                      false && "ikea-exp-card__btn_disabled"}`}
                   >
-                    <span className="ikea-icon ikea-icon_md ikea-full-card__basket">
+                    <span className="ikea-icon ikea-icon_md ikea-exp-card__basket">
                       <svg
                         width="16"
                         height="16"

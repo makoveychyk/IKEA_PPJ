@@ -1,6 +1,7 @@
-.ikea-full-card {
+.ikea-exp-card {
   display: flex;
   justify-content: center;
+  margin: 100px 0;
   &__inner {
     display: flex;
     width: 100%;
@@ -70,10 +71,10 @@
   }
   &__color-radio {
     display: none;
-    & + .ikea-full-card__color .ikea-icon {
+    & + .ikea-exp-card__color .ikea-icon {
       visibility: hidden;
     }
-    &:checked + .ikea-full-card__color .ikea-icon {
+    &:checked + .ikea-exp-card__color .ikea-icon {
       visibility: visible;
     }
   }
@@ -97,7 +98,7 @@
   }
   &__size-radio {
     display: none;
-    &:checked + .ikea-full-card__size {
+    &:checked + .ikea-exp-card__size {
       border: 2px solid $yellow-3;
       z-index: 100;
     }
@@ -107,6 +108,7 @@
     padding: 10px 15px;
     border: 1px solid #bfc1c3;
     cursor: pointer;
+    user-select: none;
     &:not(:nth-child(2)) {
       position: relative;
       left: -1px;

@@ -17,6 +17,7 @@ export default class SimpleSlider extends Component {
       slidesToShow: 1,
       slidesToScroll: 1
     };
+    const { bannerData } = this.props;
     return (
       <div className="ikea-slider">
         <Slider
@@ -50,11 +51,12 @@ export default class SimpleSlider extends Component {
             </button>
           }
         >
-          {banner.map((item, index) => (
+          {bannerData}
+          {/* {banner.map((item, index) => (
             <div key={index}>
               <Banner data={item}></Banner>
             </div>
-          ))}
+          ))} */}
         </Slider>
       </div>
     );

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { productData } from "../mock";
 import Basket from "../icons/Basket";
 import Arrow from "../icons/Arrow";
+import { Link } from "react-router-dom";
 
 export default class ItemCard extends Component {
   state = {
@@ -27,12 +28,12 @@ export default class ItemCard extends Component {
       votes
     } = this.props.data;
     return (
-      <div className="ikea-card">
+      <Link to={`/card/${title}`} className="ikea-card">
         <div className="ikea-card__inner">
           <div className="ikea-card__picture">
             <img
               className="ikea-card__img"
-              src={`${img}.png`}
+              src={`./${img}.png`}
               srcSet={`${img}@2x.png 2x, ${img}@3x.png 3x`}
               alt=""
             />
@@ -64,10 +65,18 @@ export default class ItemCard extends Component {
             </div>
             {isAdd === false ? (
               <button
-                className="ikea-icon ikea-icon_md ikea-card__basket"
                 // onMouseEnter={() => this.setState({ isAdd: true })}
+                className="ikea-card__btn"
               >
-                <Basket size="md" />
+                <span className="ikea-bold-text ikea-text-14 ikea-card__btn-text">
+                  Add to cart
+                </span>
+                <span className="ikea-card__arrow">
+                  <Arrow size="md" />
+                </span>
+                <span className="ikea-icon ikea-icon_md ikea-card__basket">
+                  <Basket size="md" />
+                </span>
               </button>
             ) : (
               <button
@@ -87,7 +96,7 @@ export default class ItemCard extends Component {
             </span>
           )}
         </div>
-      </div>
+      </Link>
     );
   }
 }

@@ -3,6 +3,6 @@ import "./scss/main.scss";
 
 import React from "react";
 import ReactDOM from "react-dom";
-import HomePage from "./hoc/HomePage.js";
+import App from "./hoc/App.js";
 
-ReactDOM.render(<HomePage />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));

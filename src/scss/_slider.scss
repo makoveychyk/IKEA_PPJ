@@ -1,10 +1,12 @@
 .ikea-slider {
   background-color: $bg-1;
+  margin-top: 70px;
   padding: 30px 0px 50px 0px;
   height: 100vh;
   @include media-breakpoint-up(lg) {
     height: auto;
     padding: 100px 0px 50px 0px;
+    margin-top: 0px;
   }
   &:focus {
     outline: none;
