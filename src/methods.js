@@ -4,3 +4,8 @@ export const fetchGoods = async () => {
     resolve(productData);
   });
 };
+export const loadMoreGoods = async ({ offset }) => {
+  return new Promise((resolve, reject) => {
+    resolve(productData);
+  });
+};

@@ -14,7 +14,7 @@ export default class MainPage extends Component {
   render() {
     return (
       <>
-        <Header></Header>
+        {/* <Header></Header> */}
         <SimpleSlider
           bannerData={banner.map((item, index) => (
             <div key={index}>
@@ -29,7 +29,7 @@ export default class MainPage extends Component {
             <ItemCard data={item}></ItemCard>
           ))}
         ></SimpleSlider> */}
-        <Footer />
+        {/* <Footer /> */}
       </>
     );
   }

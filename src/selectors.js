@@ -6,3 +6,4 @@ export const getGoods = state => {
   const goods = R.map(id => getGoodsById(state, id), state.goodsPage.ids);
   return goods;
 };
+export const getRenderedGoodsLenght = state => R.length(state.goodsPage.ids);

@@ -14,10 +14,14 @@ import { Switch, BrowserRouter, Route } from "react-router-dom";
 class App extends Component {
   render() {
     return (
+      <>
+      <Header/>
       <Switch>
         <Route exact path="/" component={MainPage}></Route>
         <Route path="/card" component={ExpandedCard}></Route>
       </Switch>
+      <Footer/>
+      </>
     );
   }
 }

@@ -5,4 +5,21 @@
   align-items: center;
   justify-content: center;
   padding: 50px 0;
+  &__load-more {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 50px;
+    &:focus .ikea-icon {
+      transition: all 1s linear;
+      transform: rotate(360deg);
+    }
+  }
+  &__load-text {
+    margin-left: 12px;
+    color: $grey-6;
+  }
 }
