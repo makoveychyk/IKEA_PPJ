@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { productData } from "../mock";
+// import { productData } from "../mock";
 import Basket from "../icons/Basket";
 import Arrow from "../icons/Arrow";
 import { Link } from "react-router-dom";
 
 export default class ItemCard extends Component {
-  state = {
-    isAdd: false
-  };
+  // state = {
+  //   isAdd: false
+  // };
   render() {
-    // console.log({ ...productData });
-    const { isAdd } = this.state;
+    // const { isAdd } = this.state;
     const {
       img,
       tag,
@@ -25,10 +24,11 @@ export default class ItemCard extends Component {
       salePrice,
       category,
       material,
-      votes
+      votes,
+      id
     } = this.props.data;
     return (
-      <Link to={`/card/${title}`} className="ikea-card">
+      <Link to={`/card/${id}`} className="ikea-card">
         <div className="ikea-card__inner">
           <div className="ikea-card__picture">
             <img
@@ -63,32 +63,21 @@ export default class ItemCard extends Component {
                 </span>
               )}
             </div>
-            {isAdd === false ? (
-              <button
-                // onMouseEnter={() => this.setState({ isAdd: true })}
-                className="ikea-card__btn"
-              >
-                <span className="ikea-bold-text ikea-text-14 ikea-card__btn-text">
-                  Add to cart
-                </span>
-                <span className="ikea-card__arrow">
-                  <Arrow size="md" />
-                </span>
-                <span className="ikea-icon ikea-icon_md ikea-card__basket">
-                  <Basket size="md" />
-                </span>
-              </button>
-            ) : (
-              <button
-                onMouseLeave={() => this.setState({ isAdd: false })}
-                className="ikea-bold-text ikea-text-14 ikea-card__btn"
-              >
-                <span>Add to cart</span>
-                <span className="ikea-icon ikea-icon_md ikea-card__arrow">
-                  <Arrow />
-                </span>
-              </button>
-            )}
+
+            <button
+              // onMouseEnter={() => this.setState({ isAdd: true })}
+              className="ikea-card__btn"
+            >
+              <span className="ikea-bold-text ikea-text-14 ikea-card__btn-text">
+                Add to cart
+              </span>
+              <span className="ikea-card__arrow">
+                <Arrow size="md" />
+              </span>
+              <span className="ikea-icon ikea-icon_md ikea-card__basket">
+                <Basket size="md" />
+              </span>
+            </button>
           </div>
           {tag !== "" && (
             <span className="ikea-main-text ikea-text-12 ikea-card__sale">

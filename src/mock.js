@@ -46,6 +46,7 @@ export const footerMenuData = [
 
 export const productData = [
   {
+    id: "1",
     img: "img/basket",
     tag: "",
     title: "KNAGGLIG",
@@ -60,6 +61,7 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
+    id: "2",
     img: "img/basket_2",
     tag: "Sale",
     title: "STORSTABBE",
@@ -75,6 +77,7 @@ export const productData = [
     material: "Scandinavian Oak"
   },
   {
+    id: "3",
     img: "img/bed_box",
     tag: "",
     title: "GNABBAS",
@@ -89,6 +92,7 @@ export const productData = [
     material: "Olive palm"
   },
   {
+    id: "4",
     img: "img/box",
     tag: "Sale",
     title: "SKOGSTA",
@@ -103,6 +107,7 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
+    id: "5",
     img: "img/box_2",
     tag: "Sale",
     title: "HUTTEN",
@@ -117,6 +122,7 @@ export const productData = [
     material: "Scandinavian Oak"
   },
   {
+    id: "6",
     img: "img/flower_box",
     tag: "Sale",
     title: "BRANÄS",
@@ -131,6 +137,7 @@ export const productData = [
     material: "Olive palm"
   },
   {
+    id: "7",
     img: "img/grey_pot",
     tag: "",
     title: "FLÅDIS",
@@ -145,6 +152,7 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
+    id: "8",
     img: "img/handle_box",
     tag: "Sale",
     title: "KNIPSA",
@@ -159,6 +167,7 @@ export const productData = [
     material: "Scandinavian Oak"
   },
   {
+    id: "9",
     img: "img/laundry_basket",
     tag: "",
     title: "MOPPE",
@@ -173,6 +182,7 @@ export const productData = [
     material: "Olive palm"
   },
   {
+    id: "10",
     img: "img/mini_chest",
     tag: "Sale",
     title: "BRANKIS",
@@ -187,6 +197,7 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
+    id: "11",
     img: "img/nightstand",
     tag: "Sale",
     title: "RÅGRUND",
@@ -201,6 +212,7 @@ export const productData = [
     material: "Scandinavian Oak"
   },
   {
+    id: "12",
     img: "img/oval_basket",
     tag: "",
     title: "RÖMSKOG",
@@ -215,6 +227,7 @@ export const productData = [
     material: "Olive palm"
   },
   {
+    id: "13",
     img: "img/plant",
     tag: "",
     title: "BRANÄS",
@@ -229,6 +242,7 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
+    id: "14",
     img: "img/rack_chair",
     tag: "",
     title: "BRANÄS",
@@ -243,6 +257,7 @@ export const productData = [
     material: "Scandinavian Oak"
   },
   {
+    id: "15",
     img: "img/rack",
     tag: "",
     title: "BRANÄS",
@@ -257,6 +272,7 @@ export const productData = [
     material: "Olive palm"
   },
   {
+    id: "16",
     img: "img/white_pot",
     tag: "Sale",
     title: "BRANÄS",
@@ -271,6 +287,7 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
+    id: "17",
     img: "img/rack",
     tag: "Sale",
     title: "FLÅDIS",
@@ -285,6 +302,7 @@ export const productData = [
     material: "Scandinavian Oak"
   },
   {
+    id: "18",
     img: "img/rack",
     tag: "",
     title: "HUTTEN",
@@ -299,6 +317,7 @@ export const productData = [
     material: "Olive palm"
   },
   {
+    id: "19",
     img: "img/rack",
     tag: "",
     title: "SKURAR",
@@ -313,6 +332,7 @@ export const productData = [
     material: "Ancient cherry"
   },
   {
+    id: "20",
     img: "img/rack",
     tag: "Sale",
     title: "BRANÄS",

@@ -24,11 +24,11 @@ export default class MainPage extends Component {
         ></SimpleSlider>
         <NewProducts></NewProducts>
         <MostPopular></MostPopular>
-        <SimpleSlider
+        {/* <SimpleSlider
           bannerData={productData.splice(0, 4).map(item => (
             <ItemCard data={item}></ItemCard>
           ))}
-        ></SimpleSlider>
+        ></SimpleSlider> */}
         <Footer />
       </>
     );

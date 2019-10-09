@@ -27,7 +27,8 @@ export default class ExpandedCard extends Component {
       salePrice,
       category,
       material,
-      votes
+      votes,
+      id
     } = productData[0];
     const { isAvtive } = this.state;
     // const renderStars = () => {
