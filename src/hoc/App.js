@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Header from "../components/Header";
@@ -9,18 +10,18 @@ import MostPopular from "../components/MostPopular";
 import { productData } from "../mock";
 import ExpandedCard from "../components/ExpandedCard";
 import MainPage from "../components/MainPage";
-import { Switch, BrowserRouter, Route } from "react-router-dom";
+import { Switch, BrowserRouter, Route } from 'react-router';
 
 class App extends Component {
   render() {
     return (
       <>
-      <Header/>
-      <Switch>
-        <Route exact path="/" component={MainPage}></Route>
-        <Route path="/card" component={ExpandedCard}></Route>
-      </Switch>
-      <Footer/>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={MainPage}></Route>
+          <Route path='/card/:id' component={ExpandedCard}></Route>
+        </Switch>
+        <Footer />
       </>
     );
   }

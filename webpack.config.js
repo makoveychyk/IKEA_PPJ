@@ -8,7 +8,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname + "/dist")
   },
   module: {
     rules: [
@@ -78,6 +78,7 @@ module.exports = {
   },
   devServer: {
     port: 3000,
+    historyApiFallback: true
     // host: "0.0.0.0",
     // disableHostCheck: true
   },

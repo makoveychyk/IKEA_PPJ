@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-// import { productData } from "../mock";
+import { productData } from "../mock";
 import Basket from "../icons/Basket";
 import Arrow from "../icons/Arrow";
 import { Link } from "react-router-dom";

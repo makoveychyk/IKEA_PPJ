@@ -7,3 +7,5 @@ export const getGoods = state => {
   return goods;
 };
 export const getRenderedGoodsLenght = state => R.length(state.goodsPage.ids);
+
+
