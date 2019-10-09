@@ -9,17 +9,15 @@ import MostPopular from "../components/MostPopular";
 import { productData } from "../mock";
 import ExpandedCard from "../components/ExpandedCard";
 import MainPage from "../components/MainPage";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { Switch, BrowserRouter, Route } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Header></Header>
+      <Switch>
         <Route exact path="/" component={MainPage}></Route>
         <Route path="/card" component={ExpandedCard}></Route>
-        <Footer></Footer>
-      </Router>
+      </Switch>
     );
   }
 }

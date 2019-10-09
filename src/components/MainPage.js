@@ -7,11 +7,14 @@ import ItemCard from "./ItemCard";
 import MostPopular from "./MostPopular";
 import { productData } from "../mock";
 import { banner } from "../mock";
+import Header from "./Header";
+import Footer from "./Footer";
 
 export default class MainPage extends Component {
   render() {
     return (
       <>
+        <Header></Header>
         <SimpleSlider
           bannerData={banner.map((item, index) => (
             <div key={index}>
@@ -21,7 +24,12 @@ export default class MainPage extends Component {
         ></SimpleSlider>
         <NewProducts></NewProducts>
         <MostPopular></MostPopular>
-        <SimpleSlider></SimpleSlider>
+        <SimpleSlider
+          bannerData={productData.splice(0, 4).map(item => (
+            <ItemCard data={item}></ItemCard>
+          ))}
+        ></SimpleSlider>
+        <Footer />
       </>
     );
   }
