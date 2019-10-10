@@ -8,19 +8,19 @@ import Wrong from "../icons/Wrong";
 import Basket from "../icons/Basket";
 import WishOutline from "../icons/WishOutline";
 import { connect } from "react-redux";
-import { fetchGoodById } from '../actions/index'
+import { fetchGoodById } from "../actions/index";
 import { getGoodsById } from "../selectors";
-
+import ScrollToTopOnMount from "./ScrollToTopOnMount";
 
 class ExpandedCard extends Component {
   componentDidMount() {
-    this.props.fetchGoodById(this.props.match.params.id)
+    this.props.fetchGoodById(this.props.match.params.id);
   }
   // state = {
   //   isAvtive: true
   // };
   render() {
-    this.props.good && console.log(this.props.good.id)
+    this.props.good && console.log(this.props.good.id);
     const { good } = this.props;
     // const {
     //   img,
@@ -50,7 +50,7 @@ class ExpandedCard extends Component {
     // };
     return (
       <>
-
+        <ScrollToTopOnMount></ScrollToTopOnMount>
         {good && (
           <section className="ikea-exp-card">
             <div className="container">
@@ -166,10 +166,10 @@ class ExpandedCard extends Component {
                         Available for order
                       </span>
                     ) : (
-                        <span className="ikea-medium-text ikea-text-12 ikea-exp-card__status ikea-exp-card__status_wrong">
-                          Not available
+                      <span className="ikea-medium-text ikea-text-12 ikea-exp-card__status ikea-exp-card__status_wrong">
+                        Not available
                       </span>
-                      )}
+                    )}
                   </div>
                   <div className="ikea-exp-card__price">
                     <span
@@ -219,18 +219,19 @@ class ExpandedCard extends Component {
           </section>
         )}
       </>
-
-    )
+    );
   }
 }
 const mapStateToProps = state => {
   return {
     good: getGoodsById(state, state.goodPage.id)
-  }
-}
+  };
+};
 const mapDispatchToProps = {
   fetchGoodById
-}
+};
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(ExpandedCard)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ExpandedCard);
