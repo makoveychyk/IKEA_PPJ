@@ -8,6 +8,7 @@ import MobileLogo from "../icons/MobileLogo";
 import Login from "../icons/Login";
 import Search from "../icons/Search";
 import Basket from "../icons/Basket";
+import { Link } from "react-router-dom";
 
 export default class Header extends Component {
   static defaultProps = {
@@ -32,9 +33,9 @@ export default class Header extends Component {
     const renderNavItems = data => {
       return data.map(({ title }, id) => (
         <li className="ikea-nav__item" key={id}>
-          <a href="#" className="ikea-nav__link">
+          <Link href="#" className="ikea-nav__link">
             {title}
-          </a>
+          </Link>
         </li>
       ));
     };
@@ -59,7 +60,7 @@ export default class Header extends Component {
                 </a>
                 <ul className="ikea-nav__list">
                   <li className="ikea-nav__item">
-                    <a
+                    <Link
                       href="#"
                       className={`ikea-nav__link ${isActive === true &&
                         "ikea-nav__link_active"}`}
@@ -71,7 +72,7 @@ export default class Header extends Component {
                       }
                     >
                       Catalog
-                    </a>
+                    </Link>
                   </li>
                   {renderNavItems(nav)}
                 </ul>

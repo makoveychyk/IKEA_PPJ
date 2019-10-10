@@ -347,3 +347,5 @@ export const productData = [
     material: "Scandinavian Oak"
   }
 ];
+
+export const slides = [{}, {}, {}, {}];

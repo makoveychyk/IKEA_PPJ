@@ -115,6 +115,7 @@
     background: none;
     border: none;
     outline: none;
+    z-index: 100;
     cursor: pointer;
     transition: all 0.15s linear;
     &:hover .ikea-card__basket {

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-// import { productData } from "../mock";
 import Star from "../icons/Star";
 import Check from "../icons/Check";
 import Success from "../icons/Success";
@@ -8,46 +7,21 @@ import Wrong from "../icons/Wrong";
 import Basket from "../icons/Basket";
 import WishOutline from "../icons/WishOutline";
 import { connect } from "react-redux";
-import { fetchGoodById } from "../actions/index";
+import { fetchGoodById, addGoodToBasket } from "../actions/index";
 import { getGoodsById } from "../selectors";
 import ScrollToTopOnMount from "./ScrollToTopOnMount";
+import SimpleSlider from "../components/SimpleSlider";
+import { slides } from "../mock";
+import Banner from "./Banner";
+import Slide from "./Slide";
+import { Link } from "react-router-dom";
 
 class ExpandedCard extends Component {
   componentDidMount() {
     this.props.fetchGoodById(this.props.match.params.id);
   }
-  // state = {
-  //   isAvtive: true
-  // };
   render() {
-    this.props.good && console.log(this.props.good.id);
-    const { good } = this.props;
-    // const {
-    //   img,
-    //   tag,
-    //   title,
-    //   subtitle,
-    //   rate,
-    //   size,
-    //   color,
-    //   status,
-    //   fullPrice,
-    //   salePrice,
-    //   category,
-    //   material,
-    //   votes,
-    //   id
-    // } = productData[0];
-    // const { isAvtive } = this.state;
-    // const renderStars = () => {
-    //   for (const index = 0; index < 5; index++) {
-    //     return (
-    //       <span className="ikea-icon ikea-icon_md">
-    //         <Star />
-    //       </span>
-    //     );
-    //   }
-    // };
+    const { good, addGoodToBasket } = this.props;
     return (
       <>
         <ScrollToTopOnMount></ScrollToTopOnMount>
@@ -190,6 +164,7 @@ class ExpandedCard extends Component {
                     <button
                       className={`ikea-btn ikea-btn_md ikea-btn_yellow ikea-exp-card__btn ikea-medium-text ikea-text-14 ${good.status ===
                         false && "ikea-exp-card__btn_disabled"}`}
+                      onClick={() => addGoodToBasket(good.id)}
                     >
                       <span className="ikea-icon ikea-icon_md ikea-exp-card__basket">
                         <svg
@@ -215,7 +190,61 @@ class ExpandedCard extends Component {
                   </div>
                 </div>
               </div>
+              <ul className="ikea-medium-text ikea-text-16 ikea-exp-card__tab-bar">
+                <li className="ikea-exp-card__tab">
+                  <Link className="ikea-exp-card__tab-link">
+                    Product Description
+                  </Link>
+                </li>
+                <li className="ikea-exp-card__tab">
+                  <Link className="ikea-exp-card__tab-link">
+                    Package Details
+                  </Link>
+                </li>
+                <li className="ikea-exp-card__tab">
+                  <Link className="ikea-exp-card__tab-link">
+                    Enviroment & Materials
+                  </Link>
+                </li>
+                <li className="ikea-exp-card__tab">
+                  <Link className="ikea-exp-card__tab-link">
+                    Assembly & documents
+                  </Link>
+                </li>
+              </ul>
             </div>
+            <div className="ikea-exp-card__slider">
+              <div className="container">
+                <h2 className="ikea-bold-text ikea-title-24 ikea-exp-card__title">
+                  Similar Products
+                </h2>
+              </div>
+              <SimpleSlider
+                bannerData={slides.map((item, index) => (
+                  <div key={index} className="ikea-exp-card__slide">
+                    <Slide />
+                  </div>
+                ))}
+              ></SimpleSlider>
+            </div>
+            <div className="ikea-exp-card__slider ikea-exp-card__slider_bg">
+              <div className="container">
+                <h2 className="ikea-bold-text ikea-title-24 ikea-exp-card__title">
+                  You May Like
+                </h2>
+                <span className="ikea-main-text ikea-text-12 ikea-card__subtitle">
+                  10 Items
+                </span>
+              </div>
+              <SimpleSlider
+                bannerData={slides.map((item, index) => (
+                  <div key={index} className="ikea-exp-card__slide">
+                    <Slide />
+                  </div>
+                ))}
+              ></SimpleSlider>
+            </div>
+            {console.log(this.props.goods)}
           </section>
         )}
       </>
@@ -228,7 +257,8 @@ const mapStateToProps = state => {
   };
 };
 const mapDispatchToProps = {
-  fetchGoodById
+  fetchGoodById,
+  addGoodToBasket
 };
 
 export default connect(

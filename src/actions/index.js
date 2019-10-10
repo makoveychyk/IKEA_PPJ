@@ -1,9 +1,20 @@
 import {
   FETCH_GOODS_FAILURE,
   FETCH_GOODS_SUCCESS,
-  FETCH_GOODS_START, LOAD_MORE_GOODS_START, LOAD_MORE_GOODS_SUCCESS, LOAD_MORE_GOODS_FAILURE, FETCH_GOODS_BY_ID_START, FETCH_GOODS_BY_ID_SUCCESS, FETCH_GOODS_BY_ID_FAILURE
+  FETCH_GOODS_START,
+  LOAD_MORE_GOODS_START,
+  LOAD_MORE_GOODS_SUCCESS,
+  LOAD_MORE_GOODS_FAILURE,
+  FETCH_GOODS_BY_ID_START,
+  FETCH_GOODS_BY_ID_SUCCESS,
+  FETCH_GOODS_BY_ID_FAILURE,
+  ADD_GOODS_TO_BASKET
 } from "../actionTypes";
-import { fetchGoods as fetchGoodsApi, loadMoreGoods as loadMoreGoodsApi, fetchGoodById as fetchGoodByIdApi } from "../methods";
+import {
+  fetchGoods as fetchGoodsApi,
+  loadMoreGoods as loadMoreGoodsApi,
+  fetchGoodById as fetchGoodByIdApi
+} from "../methods";
 import { getRenderedGoodsLenght } from "../selectors";
 
 export const fetchGoods = () => async dispatch => {
@@ -25,7 +36,7 @@ export const fetchGoods = () => async dispatch => {
   }
 };
 export const loadMoreGoods = () => async (dispatch, getState) => {
-  const offset = getRenderedGoodsLenght(getState())
+  const offset = getRenderedGoodsLenght(getState());
   dispatch({
     type: LOAD_MORE_GOODS_START
   });
@@ -59,4 +70,8 @@ export const fetchGoodById = id => async dispatch => {
       error: true
     });
   }
-}
+};
+
+export const addGoodToBasket = id => dispatch => {
+  dispatch({ type: ADD_GOODS_TO_BASKET, payload: id });
+};
