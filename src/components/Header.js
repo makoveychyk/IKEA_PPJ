@@ -8,6 +8,7 @@ import MobileLogo from "../icons/MobileLogo";
 import Login from "../icons/Login";
 import Search from "../icons/Search";
 import Basket from "../icons/Basket";
+import HeaderBasket from "./HeaderBasket";
 import { Link } from "react-router-dom";
 
 export default class Header extends Component {
@@ -93,7 +94,7 @@ export default class Header extends Component {
                 <button className="ikea-icon ikea-icon_lg ikea-user-tools__btn">
                   <Search />
                 </button>
-                <button
+                {/* <button
                   className="ikea-icon ikea-icon_xl ikea-user-tools__btn"
                   onClick={() => this.setState({ isNotEmpty: !isNotEmpty })}
                 >
@@ -104,7 +105,8 @@ export default class Header extends Component {
                   >
                     5
                   </span>
-                </button>
+                </button> */}
+                <HeaderBasket />
               </div>
             </div>
           </div>

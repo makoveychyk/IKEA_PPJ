@@ -8,4 +8,4 @@ export const getGoods = state => {
 };
 export const getRenderedGoodsLenght = state => R.length(state.goodsPage.ids);
 
-
+export const getTotalBasketCount = state => R.length(state.basket);

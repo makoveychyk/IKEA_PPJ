@@ -33,70 +33,74 @@ export default class Menu extends Component {
 
     return (
       <div className={menuClassName}>
-        {isLogged === false ? (
-          <button
-            className="ikea-menu__login"
-            onClick={() => this.props.handler(true)}
-          >
-            <span className="ikea-icon ikea-icon_md ikea-menu__icon ">
-              <Profile />
-            </span>
-            <span className="ikea-menu__text ikea-menu__text_login">
-              Log In
-            </span>
-          </button>
-        ) : (
-          <div className="ikea-profile">
-            <button className="ikea-profile__btn">
-              <span className="ikea-icon ikea-icon_md ikea-menu__icon ">
-                <Profile />
-              </span>
-              <span className="ikea-menu__text ikea-menu__text_login">
-                {" "}
-                View profile
-              </span>
-            </button>
-            <button className="ikea-profile__btn">
-              <span className="ikea-icon ikea-icon_md ikea-menu__icon">
-                <Favourite />
-              </span>
-              <span className="ikea-menu__text ikea-menu__text_login">
-                {" "}
-                Wish list
-              </span>
-            </button>
-            <button
-              className="ikea-profile__btn"
-              onClick={() => this.props.handler(false)}
-            >
-              <span className="ikea-icon ikea-icon_md ikea-menu__icon">
-                <Out />
-              </span>
-              <span className="ikea-menu__text ikea-menu__text_log-out">
-                {" "}
-                Log out
-              </span>
-            </button>
+        <div className="container">
+          <div className="ikea-menu__sidebar">
+            {isLogged === false ? (
+              <button
+                className="ikea-menu__login"
+                onClick={() => this.props.handler(true)}
+              >
+                <span className="ikea-icon ikea-icon_md ikea-menu__icon ">
+                  <Profile />
+                </span>
+                <span className="ikea-menu__text ikea-menu__text_login">
+                  Log In
+                </span>
+              </button>
+            ) : (
+              <div className="ikea-profile">
+                <button className="ikea-profile__btn">
+                  <span className="ikea-icon ikea-icon_md ikea-menu__icon ">
+                    <Profile />
+                  </span>
+                  <span className="ikea-menu__text ikea-menu__text_login">
+                    {" "}
+                    View profile
+                  </span>
+                </button>
+                <button className="ikea-profile__btn">
+                  <span className="ikea-icon ikea-icon_md ikea-menu__icon">
+                    <Favourite />
+                  </span>
+                  <span className="ikea-menu__text ikea-menu__text_login">
+                    {" "}
+                    Wish list
+                  </span>
+                </button>
+                <button
+                  className="ikea-profile__btn"
+                  onClick={() => this.props.handler(false)}
+                >
+                  <span className="ikea-icon ikea-icon_md ikea-menu__icon">
+                    <Out />
+                  </span>
+                  <span className="ikea-menu__text ikea-menu__text_log-out">
+                    {" "}
+                    Log out
+                  </span>
+                </button>
+              </div>
+            )}
+            <div className="ikea-line"></div>
+            <div className="ikea-menu__category">
+              {renderCategoryItems(category)}
+            </div>
+            <div className="ikea-line"></div>
+            <div className="ikea-menu__sale">
+              <a
+                href="#"
+                className="ikea-menu__link ikea-menu__text ikea-menu__text_accent"
+              >
+                Last ones
+              </a>
+              <a
+                href="#"
+                className="ikea-menu__link ikea-menu__text ikea-menu__text_accent"
+              >
+                Sale
+              </a>
+            </div>
           </div>
-        )}
-        <div className="ikea-line"></div>
-        <div className="ikea-menu__category">
-          {renderCategoryItems(category)}
-        </div>
-        <div className="ikea-line"></div>
-        <div className="ikea-menu__sale">
-          <a
-            href="#"
-            className="ikea-menu__link ikea-menu__text ikea-menu__text_accent"
-          >
-            Last ones
-          </a>
-          <a
-            href="#"
-            className="ikea-menu__link ikea-menu__text ikea-menu__text_accent"
-          >
-            Sale
-          </a>
         </div>
       </div>
     );

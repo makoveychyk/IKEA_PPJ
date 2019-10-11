@@ -4,8 +4,10 @@ import { productData } from "../mock";
 import Basket from "../icons/Basket";
 import Arrow from "../icons/Arrow";
 import { Link } from "react-router-dom";
+import { addGoodToBasket } from "../actions/index";
+import { connect } from "react-redux";
 
-export default class ItemCard extends Component {
+class ItemCard extends Component {
   // state = {
   //   isAdd: false
   // };
@@ -27,8 +29,9 @@ export default class ItemCard extends Component {
       votes,
       id
     } = this.props.data;
+
     return (
-      <Link to={`/card/${id}`} className="ikea-card">
+      <Link to={`card/${id}`} className="ikea-card">
         <div className="ikea-card__inner">
           <div className="ikea-card__picture">
             <img
@@ -65,7 +68,7 @@ export default class ItemCard extends Component {
             </div>
 
             <button
-              // onMouseEnter={() => this.setState({ isAdd: true })}
+              onClick={() => this.props.handler(id)}
               className="ikea-card__btn"
             >
               <span className="ikea-bold-text ikea-text-14 ikea-card__btn-text">
@@ -89,3 +92,11 @@ export default class ItemCard extends Component {
     );
   }
 }
+
+const mapDispatchToProps = {
+  addGoodToBasket
+};
+export default connect(
+  null,
+  mapDispatchToProps
+)(ItemCard);
