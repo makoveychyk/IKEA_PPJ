@@ -1,0 +1,58 @@
+.ikea-popup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  &__container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 380px;
+    height: 200px;
+    background: #fff;
+    border-radius: 7px;
+    z-index: 10;
+    margin-left: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  }
+  &__close {
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  &__btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+  &__btn {
+    margin-right: 30px;
+    color: $grey-5;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  &_open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

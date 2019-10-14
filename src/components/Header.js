@@ -19,7 +19,8 @@ export default class Header extends Component {
     isOpen: false,
     isActive: false,
     isLogged: false,
-    isNotEmpty: false
+    isNotEmpty: false,
+    visibleProfil: false
   };
 
   handler = someValue => {
@@ -30,7 +31,13 @@ export default class Header extends Component {
 
   render() {
     const { nav } = this.props;
-    const { isActive, isLogged, isOpen, isNotEmpty } = this.state;
+    const {
+      isActive,
+      isLogged,
+      isOpen,
+      isNotEmpty,
+      visibleProfil
+    } = this.state;
     const renderNavItems = data => {
       return data.map(({ title }, id) => (
         <li className="ikea-nav__item" key={id}>
@@ -86,8 +93,17 @@ export default class Header extends Component {
                   {isLogged === false ? (
                     "Log In"
                   ) : (
-                    <span className="ikea-icon ikea-icon_lg ">
+                    <span
+                      className="ikea-icon ikea-icon_lg ikea-user-tools__login"
+                      onClick={() =>
+                        this.setState({ visibleProfil: !visibleProfil })
+                      }
+                    >
                       <Login />
+                      <div
+                        className={`ikea-user-tools__profile ${visibleProfil ==
+                          true && "ikea-user-tools__profile_visible"}`}
+                      ></div>
                     </span>
                   )}
                 </button>

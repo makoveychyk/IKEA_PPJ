@@ -79,7 +79,7 @@ module.exports = {
   devServer: {
     port: 3000,
     historyApiFallback: true,
-    host: "192.168.0.109"
+   
     // disableHostCheck: true
   },
   devtool: "inline-source-map",

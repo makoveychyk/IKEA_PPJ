@@ -42,6 +42,34 @@
       display: flex;
     }
   }
+  &__login {
+    position: relative;
+  }
+  &__profile {
+    position: absolute;
+    width: 217px;
+    height: 198px;
+    background-color: #fff;
+    bottom: -230px;
+    right: -26px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    visibility: hidden;
+    &:after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 9px 10px 9px;
+      border-color: transparent transparent #ffffff transparent;
+      top: -10px;
+      right: 28px;
+    }
+    &_visible {
+      visibility: visible;
+    }
+  }
 }
 .ikea-profile {
   display: flex;

@@ -178,7 +178,7 @@
     align-items: center;
   }
   &__tab-bar {
-    display: flex;
+    display: none;
     width: 100%;
     margin-top: 90px;
     margin-bottom: 90px;
@@ -186,6 +186,9 @@
     justify-content: space-between;
     list-style-type: none;
     border-bottom: 1px solid $grey-1;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
   }
   &__tab {
     padding-bottom: 20px;

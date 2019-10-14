@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Header from "../components/Header";
@@ -10,16 +9,18 @@ import MostPopular from "../components/MostPopular";
 import { productData } from "../mock";
 import ExpandedCard from "../components/ExpandedCard";
 import MainPage from "../components/MainPage";
-import { Switch, BrowserRouter, Route } from 'react-router';
+import { Switch, BrowserRouter, Route } from "react-router";
+import Popup from "../components/Popup";
 
 class App extends Component {
   render() {
     return (
       <>
         <Header />
+        <Popup />
         <Switch>
           <Route exact path="/" component={MainPage}></Route>
-          <Route path='/card/:id' component={ExpandedCard}></Route>
+          <Route path="/card/:id" component={ExpandedCard}></Route>
         </Switch>
         <Footer />
       </>
