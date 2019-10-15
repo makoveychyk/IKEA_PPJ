@@ -11,6 +11,7 @@ import ExpandedCard from "../components/ExpandedCard";
 import MainPage from "../components/MainPage";
 import { Switch, BrowserRouter, Route } from "react-router";
 import Popup from "../components/Popup";
+import Auth from "../components/Auth";
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
       <>
         <Header />
         <Popup />
+        <Auth />
         <Switch>
           <Route exact path="/" component={MainPage}></Route>
           <Route path="/card/:id" component={ExpandedCard}></Route>

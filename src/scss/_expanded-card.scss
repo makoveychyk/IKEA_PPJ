@@ -257,7 +257,9 @@
       padding: 40px 0;
     }
     & .ikea-card:not(:last-child) {
-      margin-right: 20px;
+      @include media-breakpoint-up(lg) {
+        margin-right: 20px;
+      }
     }
   }
 }

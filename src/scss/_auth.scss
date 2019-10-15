@@ -1,0 +1,199 @@
+.ikea-auth {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  &__container {
+    position: absolute;
+    // justify-content: center;
+    max-width: 530px;
+    // height: 680px;
+    background: $bg-2;
+    border-radius: 7px;
+    z-index: 10;
+    margin-left: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include media-breakpoint-up(lg) {
+      padding-left: 95px;
+      padding-right: 95px;
+    }
+  }
+  &__close {
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    @include media-breakpoint-up(lg) {
+      top: 30px;
+      right: 30px;
+    }
+  }
+  &__title {
+    color: $grey-7;
+  }
+  &__subtitle {
+    color: #7e8286;
+  }
+  &__btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px 0;
+    width: 100%;
+  }
+  &__btn {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    max-width: 160px;
+    background-color: #fff;
+  }
+  &__footer {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: auto;
+    background-color: $grey-7;
+  }
+  &__footer-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 5px;
+    transition: all 0.15s linear;
+    &:hover {
+      color: $yellow-3;
+    }
+  }
+  &__form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+  }
+  &__field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &:focus {
+      background: #000;
+    }
+  }
+  &__label {
+    margin-bottom: 10px;
+    color: $grey-7;
+  }
+  &__email,
+  &__pass {
+    width: 100%;
+    padding: 8px 30px;
+    border-bottom: 1px solid $grey-3;
+    position: relative;
+  }
+  &__icon {
+    position: absolute;
+    left: 3px;
+    top: calc(50% - 7px);
+  }
+  &__email {
+    margin-bottom: 25px;
+  }
+  &__pass {
+    margin-bottom: 10px;
+  }
+  &__error {
+    color: $danger-2;
+    margin-bottom: 10px;
+  }
+  &__input {
+    width: 100%;
+    color: $grey-7;
+    background: inherit;
+    border: none;
+    outline: none;
+    &::placeholder {
+      color: $grey-2;
+    }
+  }
+  &__submit {
+    margin-top: 35px;
+  }
+
+  &_open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__toogle-field {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  &__toogle-real {
+    opacity: 0;
+    appearance: none;
+    position: absolute;
+    &:checked ~ .ikea-auth__toogle {
+      background-color: $success;
+      &::before {
+        left: 100%;
+        transform: translateX(calc(-100% - 4px));
+      }
+    }
+  }
+  &__toogle {
+    overflow: hidden;
+    position: relative;
+    display: inline-flex;
+    width: 22px;
+    align-items: center;
+    height: 14px;
+    border-radius: 14px;
+    margin-right: 8px;
+    background-color: $grey-4;
+    &::before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      left: 4px;
+      transition: all 0.15s linear;
+    }
+  }
+  &__toogle-text {
+    color: $grey-6;
+    user-select: none;
+  }
+}

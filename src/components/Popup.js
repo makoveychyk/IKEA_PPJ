@@ -3,8 +3,8 @@ import React, { Component } from "react";
 export default class Popup extends Component {
   render() {
     return (
-      <div className="ikea-popup">
-        <div className="ikea-popup__container">
+      <div className="ikea-popup ">
+        <div className="ikea-popup__container ikea-popup__container_out">
           <button className="ikea-icon ikea-icon_lg ikea-popup__close">
             <svg
               width="14"

@@ -1,10 +1,10 @@
-@import "~bootstrap/scss/bootstrap-grid";
+// @import "~bootstrap/scss/bootstrap-grid";
 .ikea-user-tools {
   display: flex;
   align-items: center;
+  position: relative;
   &__btn {
     background: none;
-    position: relative;
     outline: none;
     cursor: pointer;
     border: none;
@@ -48,10 +48,11 @@
   &__profile {
     position: absolute;
     width: 217px;
-    height: 198px;
+    // height: 198px;
+    padding: 12px 25px;
     background-color: #fff;
-    bottom: -230px;
-    right: -26px;
+    bottom: -240px;
+    right: 95px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     visibility: hidden;
@@ -69,6 +70,59 @@
     &_visible {
       visibility: visible;
     }
+  }
+  &__about {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  &__picture {
+    width: 50px;
+    height: 50px;
+    border: 2px solid $grey-1;
+    border-radius: 5px;
+    overflow: hidden;
+    & img {
+      height: 100%;
+    }
+  }
+  &__profile-nav {
+    border-top: 1px solid $grey-1;
+    border-bottom: 1px solid $grey-1;
+  }
+  &__profile-title {
+    color: $grey-8;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    list-style-type: none;
+    &:hover svg {
+      fill: $yellow-3;
+      transition: all 0.15s linear;
+    }
+    &:hover .ikea-user-tools__link {
+      color: $yellow-3;
+      transition: all 0.15s linear;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey-1;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $grey-6;
+    margin-left: 10px;
+  }
+  &__out {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: $grey-4;
   }
 }
 .ikea-profile {
