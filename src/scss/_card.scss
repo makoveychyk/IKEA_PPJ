@@ -35,11 +35,14 @@
   }
   &__picture {
     width: 120px;
-    height: 120px;
+    height: 100px;
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include media-breakpoint-up(lg) {
+      height: 120px;
+    }
   }
   &__img {
     height: 100%;

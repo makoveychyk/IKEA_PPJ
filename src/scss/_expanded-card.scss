@@ -20,12 +20,16 @@
   }
 
   &__picture {
-    width: 340px;
-    height: 340px;
+    width: 320px;
+    height: 320px;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include media-breakpoint-up(lg) {
+      width: 340px;
+      height: 340px;
+    }
   }
   &__img {
     height: 100%;
@@ -238,6 +242,10 @@
     width: 100%;
     background-color: $bg-2;
     padding-top: 50px;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+    }
     &_bg {
       background: #fff;
       & .ikea-slider {

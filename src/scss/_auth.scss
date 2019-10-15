@@ -19,9 +19,13 @@
     z-index: 10;
     margin-left: 10px;
     width: 90%;
+    margin-top: 35px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    @include media-breakpoint-up(lg) {
+      margin-top: 0;
+    }
   }
   &__inner {
     display: flex;
@@ -67,17 +71,25 @@
     border: none;
     cursor: pointer;
     outline: none;
-    max-width: 160px;
+    max-width: 120px;
     background-color: #fff;
+    @include media-breakpoint-up(lg) {
+      max-width: 160px;
+    }
   }
   &__footer {
-    padding: 40px 0;
+    padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 0;
+    flex-direction: column;
     margin-top: auto;
     background-color: $grey-7;
+    @include media-breakpoint-up(lg) {
+      padding: 40px 0;
+      flex-direction: row;
+    }
   }
   &__footer-btn {
     background: none;

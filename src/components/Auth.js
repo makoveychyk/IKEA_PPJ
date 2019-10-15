@@ -1,40 +1,12 @@
 import React, { Component } from "react";
-// function isInvalid({ valid, touched, shouldValidate }) {
-//   return !valid && shouldValidate && touched;
-// }
+
 export default class Auth extends Component {
-  state = {
-    isFormValid: false,
-    formControls: {
-      email: {
-        value: "",
-        errorMessage: "Wrong email. Please try again.",
-        valid: false,
-        touched: false,
-        validation: {
-          required: true,
-          email: true
-        }
-      },
-      password: {
-        value: "",
-        errorMessage: "Wrong password. Please try again.",
-        valid: false,
-        touched: false,
-        validation: {
-          required: true,
-          minLength: 6
-        }
-      }
-    }
-  };
   loginHandler = () => {};
   submitHandler = e => {
     e.preventDefault();
   };
 
   render() {
-    console.log(this.state.formControls.email.value);
     return (
       <div className="ikea-auth ">
         <div className="ikea-auth__container ">
@@ -66,7 +38,7 @@ export default class Auth extends Component {
             >
               <div className="ikea-auth__field">
                 <label
-                  htmlFor="one"
+                  htmlFor="email"
                   className="ikea-main-text ikea-text-12 ikea-auth__label"
                 >
                   Username or E-mail
@@ -89,16 +61,13 @@ export default class Auth extends Component {
                   </span>
                   <input
                     type="text"
-                    id="one"
+                    id="email"
                     className="ikea-main-text ikea-text-14 ikea-auth__input"
                     placeholder="Enter your email"
-                    value={this.state.formControls.email.value}
-                    touched={this.state.formControls.email.touched}
-                    valid={this.state.formControls.email.valid}
                   />
                 </div>
                 <label
-                  htmlFor="two"
+                  htmlFor="pass"
                   className="ikea-main-text ikea-text-12 ikea-auth__label"
                 >
                   Password
@@ -121,15 +90,12 @@ export default class Auth extends Component {
                   </span>
                   <input
                     type="password"
-                    id="two"
+                    id="pass"
                     className="ikea-main-text ikea-text-14 ikea-auth__input"
                     placeholder="Enter your password"
-                    value={this.state.formControls.password.value}
-                    touched={this.state.formControls.password.touched}
-                    valid={this.state.formControls.password.valid}
                   />
                 </div>
-                {/* { ? (
+                {/* {isInvalid(props) ? (
                   <span className="ikea-main-text ikea-text-12 ikea-auth__error">
                     Wrong password or email. Please try again.
                   </span>
