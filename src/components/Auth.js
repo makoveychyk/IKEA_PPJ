@@ -1,12 +1,77 @@
 import React, { Component } from "react";
 
+const emailRegex = RegExp(
+  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+);
+
+const formValid = ({ formErrors, ...rest }) => {
+  let valid = true;
+
+  Object.values(formErrors).forEach(val => {
+    val.length > 0 && (valid = false);
+  });
+
+  Object.values(rest).forEach(val => {
+    val === null && (valid = false);
+  });
+
+  return valid;
+};
 export default class Auth extends Component {
+  state = {
+    email: null,
+    password: null,
+    formErrors: {
+      email: "",
+      password: ""
+    }
+  };
+
   loginHandler = () => {};
   submitHandler = e => {
     e.preventDefault();
+    if (formValid(this.state)) {
+      console.log(`
+        --SUBMITTING--
+        Email: ${this.state.email}
+        Password: ${this.state.password}
+      `);
+    } else {
+      console.error("FORM INVALID - DISPLAY ERROR MESSAGE");
+    }
   };
 
+  handleChange = e => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    let formErrors = { ...this.state.formErrors };
+
+    switch (name) {
+      case "firstName":
+        formErrors.firstName =
+          value.length < 3 ? "minimum 3 characaters required" : "";
+        break;
+      case "lastName":
+        formErrors.lastName =
+          value.length < 3 ? "minimum 3 characaters required" : "";
+        break;
+      case "email":
+        formErrors.email = emailRegex.test(value)
+          ? ""
+          : "invalid email address";
+        break;
+      case "password":
+        formErrors.password =
+          value.length < 6 ? "minimum 6 characaters required" : "";
+        break;
+      default:
+        break;
+    }
+
+    this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+  };
   render() {
+    const { formErrors, email, password } = this.state;
     return (
       <div className="ikea-auth ">
         <div className="ikea-auth__container ">
@@ -35,6 +100,7 @@ export default class Auth extends Component {
               action=""
               className="ikea-auth__form"
               onSubmit={this.submitHandler}
+              noValidate
             >
               <div className="ikea-auth__field">
                 <label
@@ -43,7 +109,15 @@ export default class Auth extends Component {
                 >
                   Username or E-mail
                 </label>
-                <div className="ikea-auth__email">
+                <div
+                  className={`ikea-auth__email ${
+                    formErrors.email.length > 0 && email.length > 0
+                      ? "ikea-auth__email_error"
+                      : formErrors.email.length == 0 && email != null
+                      ? "ikea-auth__email_success"
+                      : ""
+                  }`}
+                >
                   <span className="ikea-icon ikea-icon_sm ikea-auth__icon">
                     <svg
                       width="10"
@@ -60,11 +134,47 @@ export default class Auth extends Component {
                     </svg>
                   </span>
                   <input
-                    type="text"
-                    id="email"
+                    type="email"
                     className="ikea-main-text ikea-text-14 ikea-auth__input"
                     placeholder="Enter your email"
+                    onChange={this.handleChange}
+                    name="email"
+                    noValidate
                   />
+                  {formErrors.email.length > 0 && email.length > 0 ? (
+                    <span className="ikea-icon ikea-icon_sm ikea-auth__status">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M11.8335 5.99992C11.8335 2.77817 9.22191 0.166584 6.00016 0.166585C2.77841 0.166585 0.166827 2.77817 0.166828 5.99992C0.166828 9.22167 2.77841 11.8333 6.00016 11.8333C9.22191 11.8333 11.8335 9.22167 11.8335 5.99992ZM1.33358 5.99994C1.33358 3.42261 3.42291 1.33327 6.00024 1.33327C8.57757 1.33327 10.6669 3.42261 10.6669 5.99994C10.6669 8.57727 8.57757 10.6666 6.00024 10.6666C3.42292 10.6666 1.33358 8.57727 1.33358 5.99994ZM5.41691 8.91661L5.41691 7.74994L6.58358 7.74994L6.58358 8.91661L5.41691 8.91661ZM5.41691 3.08327L5.41691 6.58327L6.58358 6.58327L6.58358 3.08327L5.41691 3.08327Z"
+                          fill="#E65C5C"
+                        />
+                      </svg>
+                    </span>
+                  ) : formErrors.email.length == 0 && email != null ? (
+                    <span className="ikea-icon ikea-icon_sm ikea-auth__status">
+                      <svg
+                        width="10"
+                        height="9"
+                        viewBox="0 0 10 9"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 3.61399L3.8 6.69092L9 1.69092"
+                          stroke="#FFD600"
+                          strokeWidth="2"
+                          fill="none"
+                        />
+                      </svg>
+                    </span>
+                  ) : null}
                 </div>
                 <label
                   htmlFor="pass"
@@ -72,7 +182,15 @@ export default class Auth extends Component {
                 >
                   Password
                 </label>
-                <div className="ikea-auth__pass">
+                <div
+                  className={`ikea-auth__pass ${
+                    formErrors.password.length > 0 && password.length > 0
+                      ? "ikea-auth__pass_error"
+                      : formErrors.password.length == 0 && password != null
+                      ? "ikea-auth__pass_success"
+                      : ""
+                  }`}
+                >
                   <span className="ikea-icon ikea-icon_sm ikea-auth__icon">
                     <svg
                       width="12"
@@ -90,20 +208,64 @@ export default class Auth extends Component {
                   </span>
                   <input
                     type="password"
-                    id="pass"
                     className="ikea-main-text ikea-text-14 ikea-auth__input"
                     placeholder="Enter your password"
+                    onChange={this.handleChange}
+                    name="password"
+                    noValidate
                   />
+                  {formErrors.password.length > 0 && password.length > 0 ? (
+                    <span className="ikea-icon ikea-icon_sm ikea-auth__status">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M11.8335 5.99992C11.8335 2.77817 9.22191 0.166584 6.00016 0.166585C2.77841 0.166585 0.166827 2.77817 0.166828 5.99992C0.166828 9.22167 2.77841 11.8333 6.00016 11.8333C9.22191 11.8333 11.8335 9.22167 11.8335 5.99992ZM1.33358 5.99994C1.33358 3.42261 3.42291 1.33327 6.00024 1.33327C8.57757 1.33327 10.6669 3.42261 10.6669 5.99994C10.6669 8.57727 8.57757 10.6666 6.00024 10.6666C3.42292 10.6666 1.33358 8.57727 1.33358 5.99994ZM5.41691 8.91661L5.41691 7.74994L6.58358 7.74994L6.58358 8.91661L5.41691 8.91661ZM5.41691 3.08327L5.41691 6.58327L6.58358 6.58327L6.58358 3.08327L5.41691 3.08327Z"
+                          fill="#E65C5C"
+                        />
+                      </svg>
+                    </span>
+                  ) : formErrors.password.length == 0 && password != null ? (
+                    <span className="ikea-icon ikea-icon_sm ikea-auth__status">
+                      <svg
+                        width="10"
+                        height="9"
+                        viewBox="0 0 10 9"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 3.61399L3.8 6.69092L9 1.69092"
+                          stroke="#FFD600"
+                          strokeWidth="2"
+                          fill="none"
+                        />
+                      </svg>
+                    </span>
+                  ) : null}
                 </div>
-                {/* {isInvalid(props) ? (
+                {formErrors.email.length > 0 && email.length > 0 ? (
                   <span className="ikea-main-text ikea-text-12 ikea-auth__error">
-                    Wrong password or email. Please try again.
+                    Wrong email. Please try again.
                   </span>
-                ) : null} */}
+                ) : formErrors.password.length > 0 && password.length > 0 ? (
+                  <span className="ikea-main-text ikea-text-12 ikea-auth__error">
+                    Wrong password. Please try again.
+                  </span>
+                ) : (
+                  <span className="ikea-main-text ikea-text-12 ikea-auth__subtitle">
+                    Forgot password?
+                  </span>
+                )}
 
-                <span className="ikea-main-text ikea-text-12 ikea-auth__subtitle">
+                {/* <span className="ikea-main-text ikea-text-12 ikea-auth__subtitle">
                   Forgot password?
-                </span>
+                </span> */}
 
                 <label className="ikea-auth__toogle-field">
                   <input type="checkbox" className="ikea-auth__toogle-real" />
@@ -123,8 +285,38 @@ export default class Auth extends Component {
               </button>
             </form>
             <div className="ikea-auth__btn-group">
-              <button className="ikea-btn ikea-btn_md ikea-auth__btn"></button>
-              <button className="ikea-btn ikea-btn_md ikea-auth__btn"></button>
+              <button className="ikea-btn ikea-btn_md ikea-auth__btn">
+                <span className="ikea-icon ikea-icon_lg">
+                  <img
+                    src="./img/google.png"
+                    srcSet="./img/google@2x.png 2x, google@3x.png 3x"
+                    alt=""
+                  />
+                </span>
+
+                <span className="ikea-bold-text ikea-text-12 ikea-auth__title">
+                  Sign in with Google
+                </span>
+              </button>
+              <button className="ikea-btn ikea-btn_md ikea-auth__btn">
+                <span className="ikea-icon ikea-icon_lg">
+                  <svg
+                    width="10"
+                    height="20"
+                    viewBox="0 0 10 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.4908 19.9971V10.8762H9.43911L9.88051 7.32169H6.4908V5.05222C6.4908 4.02312 6.76604 3.32174 8.18733 3.32174L10 3.32087V0.141741C9.68636 0.0985807 8.61042 0.00183105 7.35864 0.00183105C4.74517 0.00183105 2.95593 1.65826 2.95593 4.70037V7.32179H0V10.8763H2.95584V19.9972L6.4908 19.9971Z"
+                      fill="#3C5A9A"
+                    />
+                  </svg>
+                </span>
+                <span className="ikea-bold-text ikea-text-12 ikea-auth__title">
+                  Sign in with Google
+                </span>
+              </button>
             </div>
           </div>
           <div className=" ikea-auth__footer">
